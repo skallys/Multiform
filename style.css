@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+}
+
+#app {
+  display: grid;
+  grid-template-columns: 30vw 1fr;
+  overflow: hidden;
+  width: 100vw;
+}
+
+#renderer {
+  height: 100vh;
+  width: 80vw;
+}
