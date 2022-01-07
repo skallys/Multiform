@@ -4,11 +4,11 @@ let sketch = function (p) {
   let offset = 0;
   p.setup = function () {
     let cnv = p.createCanvas(window.innerWidth / 3.33, 400);
-    p.pixelDensity(5);
+    p.pixelDensity(2);
     cnv.id("drawing-canvas");
   };
   p.draw = function () {
-    p.background(0, 0, 0, 255);
+    p.background(255, 0, 0);
 
     for (let i = 0; i < p.width; i += 5) {
       p.stroke(255, 255, 255);
