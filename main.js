@@ -1,7 +1,7 @@
 import "./style.css";
 
 import model from "./models/jersey/scene.glb";
-import { sketchSelect, switchSketch } from "./sketch";
+import { sketches, sketchSelect, switchSketch } from "./sketch";
 import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
@@ -10,6 +10,7 @@ let camera, scene, renderer, material, drawingCanvas;
 
 init();
 setupCanvasDrawing();
+createSelect();
 
 function init() {
   // RENDERER
@@ -96,6 +97,7 @@ function init() {
 }
 
 function setupCanvasDrawing() {
+  switchSketch(0);
   // Make sure P5 canvas is loaded before render
   setTimeout(function () {
     drawingCanvas = document.getElementById("drawing-canvas");
@@ -110,10 +112,17 @@ function animate() {
   renderer.render(scene, camera);
 }
 
-//  Update canvas texture if switch
-
-sketchSelect.addEventListener("input", function () {
-  switchSketch(this.value);
-  drawingCanvas = document.getElementById("drawing-canvas");
-  material.emissiveMap = new THREE.CanvasTexture(drawingCanvas);
-});
+function createSelect() {
+  sketches.forEach(function (e, i) {
+    let element = document.createElement("option");
+    let content = document.createTextNode(e.name);
+    element.appendChild(content);
+    element.value = i;
+    sketchSelect.appendChild(element);
+  });
+  sketchSelect.addEventListener("input", function () {
+    switchSketch(this.value);
+    drawingCanvas = document.getElementById("drawing-canvas");
+    material.emissiveMap = new THREE.CanvasTexture(drawingCanvas);
+  });
+}
