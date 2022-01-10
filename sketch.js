@@ -1,22 +1,66 @@
 import p5 from "p5";
 
-let sketch = function (p) {
-  let offset = 0;
-  p.setup = function () {
-    let cnv = p.createCanvas(window.innerWidth / 3.33, 400);
-    p.pixelDensity(2);
-    cnv.id("drawing-canvas");
-  };
-  p.draw = function () {
-    p.background(255, 0, 0);
+export let currentSketch;
 
-    for (let i = 0; i < p.width; i += 5) {
-      p.stroke(255, 255, 255);
-      p.line(i + offset, 0, i * offset, p.height);
-    }
-    p.rect(p.mouseX, p.mouseY, 10, 10);
-    offset += 0.001;
+export const sketchSelect = document.getElementById("p5-select");
+
+const a = (sketch) => {
+  sketch.setup = () => {
+    let cnv = sketch.createCanvas(window.innerWidth / 3.33, 400);
+    sketch.pixelDensity(2);
+    cnv.id("drawing-canvas");
+    sketch.background(255, 0, 0, 255);
+  };
+  sketch.draw = function () {
+    sketch.rect(sketch.mouseX, sketch.mouseY, 10, 10);
   };
 };
 
-new p5(sketch, "p5-container");
+const b = (sketch) => {
+  sketch.setup = () => {
+    let cnv = sketch.createCanvas(window.innerWidth / 3.33, 400);
+    sketch.pixelDensity(2);
+    cnv.id("drawing-canvas");
+    sketch.background(40, 40, 40, 255);
+  };
+  sketch.draw = function () {
+    sketch.ellipse(sketch.mouseX, sketch.mouseY, 10, 10);
+  };
+};
+
+const c = (sketch) => {
+  sketch.setup = () => {
+    let cnv = sketch.createCanvas(window.innerWidth / 3.33, 400);
+    sketch.pixelDensity(2);
+    cnv.id("drawing-canvas");
+    sketch.background(0, 255, 0, 255);
+  };
+  sketch.draw = function () {
+    sketch.ellipse(sketch.mouseX, sketch.mouseY, 50, 50);
+  };
+};
+
+const d = (sketch) => {
+  sketch.setup = () => {
+    let cnv = sketch.createCanvas(window.innerWidth / 3.33, 400);
+    sketch.pixelDensity(2);
+    cnv.id("drawing-canvas");
+    sketch.background(0, 0, 255, 255);
+  };
+  sketch.draw = function () {
+    sketch.ellipse(sketch.mouseX, sketch.mouseY, 100, 100);
+  };
+};
+
+// Sketch switching mechanism
+export const sketches = [a, b, c, d];
+export function switchSketch(n) {
+  currentSketch.remove();
+  currentSketch = new p5(sketches[n], "p5-container");
+}
+
+currentSketch = new p5(a, "p5-container");
+// sketchSelect.addEventListener("input", function () {
+//   document.getElementById("drawing-canvas").remove();
+//   currentSketch = new p5(sketches[this.value], "p5-container");
+// });

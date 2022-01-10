@@ -1,10 +1,12 @@
-import "./sketch";
 import "./style.css";
+
 import model from "./models/jersey/scene.glb";
+import { sketchSelect, switchSketch } from "./sketch";
 import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-let camera, scene, renderer, material;
+
+let camera, scene, renderer, material, drawingCanvas;
 
 init();
 setupCanvasDrawing();
@@ -30,15 +32,16 @@ function init() {
     2000
   );
 
-  camera.position.set(0.2, 0, 3);
+  camera.position.set(0, 0, 3);
 
   // SCENE
   scene = new THREE.Scene();
-  // scene.background = new THREE.Color(0xa0a0a0);
+  scene.background = new THREE.Color(0xffffff);
 
   // MATERIAL
   material = new THREE.MeshStandardMaterial({
-    emissive: new THREE.Color(0xffffff)
+    emissive: new THREE.Color(0xffffff),
+    side: THREE.DoubleSide
   });
 
   // MODEL
@@ -51,7 +54,7 @@ function init() {
       //   console.log(child);
       // });
 
-      gltf.scene.position.set(0, 0, 0);
+      gltf.scene.position.set(-0.2, 0.05, 0);
       gltf.scene.scale.set(3, 2.5, 3);
 
       scene.add(gltf.scene);
@@ -85,16 +88,17 @@ function init() {
   controls.update();
 
   // LIGHTS
-  const light = new THREE.AmbientLight(0x404040); // soft white light
-  scene.add(light);
-  const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5);
+  // const light = new THREE.AmbientLight(0x404040); // soft white light
+  // scene.add(light);
+  const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
+  directionalLight.position.set(10, -10, 0);
   scene.add(directionalLight);
 }
 
 function setupCanvasDrawing() {
   // Make sure P5 canvas is loaded before render
   setTimeout(function () {
-    const drawingCanvas = document.getElementById("drawing-canvas");
+    drawingCanvas = document.getElementById("drawing-canvas");
     material.emissiveMap = new THREE.CanvasTexture(drawingCanvas);
     animate();
   }, 0);
@@ -105,3 +109,11 @@ function animate() {
   material.emissiveMap.needsUpdate = true;
   renderer.render(scene, camera);
 }
+
+//  Update canvas texture if switch
+
+sketchSelect.addEventListener("input", function () {
+  switchSketch(this.value);
+  drawingCanvas = document.getElementById("drawing-canvas");
+  material.emissiveMap = new THREE.CanvasTexture(drawingCanvas);
+});

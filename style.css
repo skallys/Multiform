@@ -3,11 +3,20 @@ body {
   background: #404040;
 }
 
+select,
+input {
+  width: 100%;
+}
+
 #app {
   display: grid;
   grid-template-columns: 30vw 1fr;
   overflow: hidden;
   width: 100vw;
+}
+
+#p5-controls {
+  padding: 1rem;
 }
 
 #renderer {
