@@ -10,7 +10,7 @@ createSelect();
 
 // Create select dropdown
 function createSelect() {
-  currentSketch = switchSketch(1);
+  currentSketch = switchSketch(5);
 
   // Get <select> element from DOM
   const selectElement = document.getElementById("sketch-select");
