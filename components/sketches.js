@@ -96,6 +96,31 @@ const e = {
 };
 sketches.push(e);
 
+const f = {
+  name: "Lines",
+  sketch: (sketch) => {
+    let offset = 0;
+    sketch.setup = () => {
+      let cnv = sketch.createCanvas(window.innerWidth / 3.33, 400);
+      sketch.pixelDensity(2);
+      cnv.id("drawing-canvas");
+      sketch.background(0, 255, 255, 255);
+    };
+    sketch.draw = function () {
+      for (let i = 0; i < sketch.width; i += 10) {
+        sketch.line(i, 0 + offset, i, 0);
+      }
+      offset++;
+      console.log(offset);
+      if (offset > sketch.height) {
+        offset = 0;
+        sketch.background(0, 255, 255, 255);
+      }
+    };
+  }
+};
+sketches.push(f);
+
 // Sketch switching mechanism
 export function switchSketch(n) {
   if (currentSketch) {
