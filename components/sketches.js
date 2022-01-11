@@ -154,7 +154,7 @@ const f = {
         name: "Speed",
         type: "range",
         max: 4,
-        min: 0.1,
+        min: 0,
         value: 1,
         step: 0.1
       });
@@ -192,22 +192,17 @@ function createControl(e, options) {
   let container = document.createElement("div");
   let label = document.createElement("label");
   let value = document.createElement("span");
-
   container.classList.add("option");
-
   label.innerHTML = options.name;
   for (const attribute in options) {
     e.setAttribute(attribute, options[attribute]);
   }
-
   value.innerHTML = e.value;
-
   container.appendChild(label);
   label.appendChild(value);
   container.appendChild(e);
   controls.appendChild(container);
   currentSketchControls.push(container);
-
   return value;
 }
 
