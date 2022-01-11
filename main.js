@@ -1,12 +1,13 @@
-import "./style.css";
+import "./styles/style.css";
 
 import model from "./models/jersey/scene.glb";
-import { sketches, sketchSelect, switchSketch } from "./sketch";
 import * as THREE from "three";
+
+import { sketches, switchSketch } from "./components/sketches";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
-let camera, scene, renderer, material, drawingCanvas;
+let camera, scene, renderer, material, targetCanvas, currentSketch;
 
 init();
 setupCanvasDrawing();
@@ -30,7 +31,7 @@ function init() {
     50,
     window.innerWidth / window.innerHeight,
     1,
-    2000
+    5000
   );
 
   camera.position.set(0, 0, 3);
@@ -97,11 +98,13 @@ function init() {
 }
 
 function setupCanvasDrawing() {
-  switchSketch(0);
+  // Load P5 instance to be first sketch in sketches array.
+  // Set currenSketch variable to be the sketch object returned from
+  // switchSketch function.
+  currentSketch = switchSketch(0);
   // Make sure P5 canvas is loaded before render
   setTimeout(function () {
-    drawingCanvas = document.getElementById("drawing-canvas");
-    material.emissiveMap = new THREE.CanvasTexture(drawingCanvas);
+    setCanvasTexture();
     animate();
   }, 0);
 }
@@ -112,17 +115,31 @@ function animate() {
   renderer.render(scene, camera);
 }
 
+function setCanvasTexture() {
+  targetCanvas = document.getElementById("drawing-canvas");
+  material.emissiveMap = new THREE.CanvasTexture(targetCanvas);
+}
+
+// Create select dropdown
 function createSelect() {
+  // Get <select> element from DOM
+  const selectElement = document.getElementById("sketch-select");
+
   sketches.forEach(function (e, i) {
+    // For each sketch in sketches array, create a new option element + text node
+    // from name in object. Use index as the value, for use in switch
     let element = document.createElement("option");
     let content = document.createTextNode(e.name);
     element.appendChild(content);
     element.value = i;
-    sketchSelect.appendChild(element);
+    selectElement.appendChild(element);
+    if (currentSketch == e) {
+      element.selected = true;
+    }
   });
-  sketchSelect.addEventListener("input", function () {
-    switchSketch(this.value);
-    drawingCanvas = document.getElementById("drawing-canvas");
-    material.emissiveMap = new THREE.CanvasTexture(drawingCanvas);
+
+  selectElement.addEventListener("input", function () {
+    currentSketch = switchSketch(this.value);
+    setCanvasTexture();
   });
 }
