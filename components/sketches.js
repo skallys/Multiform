@@ -1,4 +1,5 @@
 import p5 from "p5";
+import { hexToRgb } from "./utils";
 
 // Must import images here for vite to handle static asset correctly
 import catImage from "../images/cat.jpeg";
@@ -16,9 +17,10 @@ let currentSketchControls = [];
 const a = {
   name: "Cat",
   sketch: (sketch) => {
+    // Must use sketch object to use p5.js features
     let img;
     sketch.setup = () => {
-      let cnv = sketch.createCanvas(window.innerWidth / 3.33, 400);
+      let cnv = sketch.createCanvas(300, 400);
       sketch.pixelDensity(2);
       cnv.id("drawing-canvas");
       sketch.background(255, 0, 0, 255);
@@ -104,33 +106,38 @@ const f = {
   name: "Lines",
   sketch: (sketch) => {
     let offset = 0;
-    let linesValue, speedValue;
+    let linesValue, speedValue, backgroundValues, strokeValues;
 
     sketch.setup = () => {
       let cnv = sketch.createCanvas(window.innerWidth / 3.33, 400);
       sketch.pixelDensity(2);
       cnv.id("drawing-canvas");
-      sketch.background(
-        sketch.random(0, 255),
-        sketch.random(0, 255),
-        sketch.random(0, 255)
-      );
-      sketch.stroke(
-        sketch.random(0, 255),
-        sketch.random(0, 255),
-        sketch.random(0, 255)
-      );
-
       linesValue = sketch.setupLinesControl();
       speedValue = sketch.setupSpeedControl();
+      backgroundValues = sketch.setupBackgroundControl();
+      strokeValues = sketch.setupStrokeControl();
+
+      sketch.background(hexToRgb(backgroundValues));
+      sketch.stroke(hexToRgb(strokeValues));
+    };
+    sketch.draw = function () {
+      for (let i = 0; i < sketch.width; i = i + linesValue) {
+        sketch.line(i, 0 + offset, i, 0);
+      }
+      offset += speedValue;
+      if (offset > sketch.height) {
+        offset = 0;
+        sketch.background(backgroundValues);
+        sketch.stroke(strokeValues);
+      }
     };
 
     sketch.setupLinesControl = function () {
       // Create the element
-      let lines = document.createElement("input");
+      let element = document.createElement("input");
 
       // Use helper function to create control. First parameter is the control element itself. Second parameter is an object with control attributes. Name property is displayed. createControl returns its label element for display the value.
-      let control = createControl(lines, {
+      let control = createControl(element, {
         name: "Line Spacing",
         type: "range",
         max: 40,
@@ -139,18 +146,20 @@ const f = {
       });
 
       // // Listen to input changes and set readable value
-      lines.addEventListener("input", () => {
-        linesValue = parseInt(lines.value);
+      element.addEventListener("input", () => {
+        linesValue = parseInt(element.value);
         control.innerHTML = linesValue;
+        sketch.background(backgroundValues);
+        offset = 0;
       });
 
       // // Return value of input for sketch
-      return parseInt(lines.value);
+      return parseInt(element.value);
     };
 
     sketch.setupSpeedControl = function () {
-      let speed = document.createElement("input");
-      let control = createControl(speed, {
+      let element = document.createElement("input");
+      let control = createControl(element, {
         name: "Speed",
         type: "range",
         max: 4,
@@ -158,31 +167,40 @@ const f = {
         value: 1,
         step: 0.1
       });
-      speed.addEventListener("input", () => {
-        speedValue = parseFloat(speed.value);
+      element.addEventListener("input", () => {
+        speedValue = parseFloat(element.value);
         control.innerHTML = speedValue;
       });
-      return parseFloat(speed.value);
+      return parseFloat(element.value);
     };
 
-    sketch.draw = function () {
-      for (let i = 0; i < sketch.width; i = i + linesValue) {
-        sketch.line(i, 0 + offset, i, 0);
-      }
-      offset += speedValue;
-      if (offset > sketch.height) {
-        offset = 0;
-        sketch.background(
-          sketch.random(0, 255),
-          sketch.random(0, 255),
-          sketch.random(0, 255)
-        );
-        sketch.stroke(
-          sketch.random(0, 255),
-          sketch.random(0, 255),
-          sketch.random(0, 255)
-        );
-      }
+    sketch.setupBackgroundControl = function () {
+      let element = document.createElement("input");
+      let control = createControl(element, {
+        name: "Background",
+        type: "color"
+      });
+      element.addEventListener("input", () => {
+        backgroundValues = hexToRgb(element.value);
+        control.innerHTML = backgroundValues;
+        sketch.background(backgroundValues);
+      });
+      return element.value;
+    };
+
+    sketch.setupStrokeControl = function () {
+      let element = document.createElement("input");
+      let control = createControl(element, {
+        name: "Stroke",
+        type: "color",
+        value: "#ffffff"
+      });
+      element.addEventListener("input", () => {
+        strokeValues = hexToRgb(element.value);
+        control.innerHTML = strokeValues;
+        sketch.stroke(strokeValues);
+      });
+      return element.value;
     };
   }
 };
@@ -213,6 +231,7 @@ export function switchSketch(n) {
       currentSketchControls.forEach((e) => {
         e.remove();
       });
+      currentSketchControls = [];
     }
     currentSketch.remove();
   }

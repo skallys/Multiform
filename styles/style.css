@@ -15,7 +15,7 @@ input {
 
 #app {
   display: grid;
-  grid-template-columns: 30vw 1fr;
+  grid-template-columns: 300px 1fr;
   overflow: hidden;
   width: 100vw;
 }
