@@ -26,7 +26,7 @@ export function init() {
     5000
   );
 
-  camera.position.set(0, 0, 3);
+  camera.position.set(-1, 0, 2.5);
 
   // SCENE
   scene = new THREE.Scene();

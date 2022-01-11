@@ -5,9 +5,9 @@ import { hexToRgb } from "./utils";
 import catImage from "../images/cat.jpeg";
 
 const controls = document.getElementById("p5-controls");
+const sketchWidth = 600;
 
 export let sketches = [];
-
 let currentSketch;
 let currentSketchControls = [];
 
@@ -20,7 +20,7 @@ const a = {
     // Must use sketch object to use p5.js features
     let img;
     sketch.setup = () => {
-      let cnv = sketch.createCanvas(300, 400);
+      let cnv = sketch.createCanvas(sketchWidth, 400);
       sketch.pixelDensity(2);
       cnv.id("drawing-canvas");
       sketch.background(255, 0, 0, 255);
@@ -38,7 +38,7 @@ const b = {
   name: "Small Ellipses",
   sketch: (sketch) => {
     sketch.setup = () => {
-      let cnv = sketch.createCanvas(window.innerWidth / 3.33, 400);
+      let cnv = sketch.createCanvas(sketchWidth, 400);
       sketch.pixelDensity(2);
       cnv.id("drawing-canvas");
       sketch.background(40, 40, 40, 255);
@@ -55,7 +55,7 @@ const c = {
   name: "Medium Ellipses",
   sketch: (sketch) => {
     sketch.setup = () => {
-      let cnv = sketch.createCanvas(window.innerWidth / 3.33, 400);
+      let cnv = sketch.createCanvas(sketchWidth, 400);
       sketch.pixelDensity(2);
       cnv.id("drawing-canvas");
       sketch.background(0, 255, 0, 255);
@@ -72,7 +72,7 @@ const d = {
   name: "Big Ellipses",
   sketch: (sketch) => {
     sketch.setup = () => {
-      let cnv = sketch.createCanvas(window.innerWidth / 3.33, 400);
+      let cnv = sketch.createCanvas(sketchWidth, 400);
       sketch.pixelDensity(2);
       cnv.id("drawing-canvas");
       sketch.background(0, 0, 255, 255);
@@ -89,7 +89,7 @@ const e = {
   name: "Rectangles",
   sketch: (sketch) => {
     sketch.setup = () => {
-      let cnv = sketch.createCanvas(window.innerWidth / 3.33, 400);
+      let cnv = sketch.createCanvas(sketchWidth, 400);
       sketch.pixelDensity(2);
       cnv.id("drawing-canvas");
       sketch.background(0, 255, 255, 255);
@@ -109,14 +109,13 @@ const f = {
     let linesValue, speedValue, backgroundValues, strokeValues;
 
     sketch.setup = () => {
-      let cnv = sketch.createCanvas(window.innerWidth / 3.33, 400);
+      let cnv = sketch.createCanvas(sketchWidth, 400);
       sketch.pixelDensity(2);
       cnv.id("drawing-canvas");
       linesValue = sketch.setupLinesControl();
       speedValue = sketch.setupSpeedControl();
       backgroundValues = sketch.setupBackgroundControl();
       strokeValues = sketch.setupStrokeControl();
-
       sketch.background(hexToRgb(backgroundValues));
       sketch.stroke(hexToRgb(strokeValues));
     };
@@ -178,7 +177,8 @@ const f = {
       let element = document.createElement("input");
       let control = createControl(element, {
         name: "Background",
-        type: "color"
+        type: "color",
+        value: "#000000"
       });
       element.addEventListener("input", () => {
         backgroundValues = hexToRgb(element.value);
