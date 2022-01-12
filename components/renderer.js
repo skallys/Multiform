@@ -58,17 +58,6 @@ export function init() {
   );
 
   // SET MATERIAL TO MODEL MESHES
-  function setMaterialsOnGLTF(gltfScene) {
-    if (gltfScene.material) {
-      gltfScene.material = material;
-    }
-    if (!gltfScene.children) {
-      return;
-    }
-    for (let i = 0; i < gltfScene.children.length; i++) {
-      setMaterialsOnGLTF(gltfScene.children[i]);
-    }
-  }
 
   // CONTROLS
   const controls = new OrbitControls(camera, renderer.domElement);
@@ -78,6 +67,20 @@ export function init() {
   const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
   directionalLight.position.set(10, -10, 0);
   scene.add(directionalLight);
+
+  return true;
+}
+
+function setMaterialsOnGLTF(gltfScene) {
+  if (gltfScene.material) {
+    gltfScene.material = material;
+  }
+  if (!gltfScene.children) {
+    return;
+  }
+  for (let i = 0; i < gltfScene.children.length; i++) {
+    setMaterialsOnGLTF(gltfScene.children[i]);
+  }
 }
 
 function setupCanvasDrawing() {

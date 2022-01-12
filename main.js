@@ -5,8 +5,11 @@ import { init, setCanvasTexture } from "./components/renderer";
 
 let currentSketch;
 
-init();
-createSelect();
+let rendererIsLoaded = init();
+
+if (rendererIsLoaded) {
+  createSelect();
+}
 
 // Create select dropdown
 function createSelect() {

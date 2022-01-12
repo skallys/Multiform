@@ -131,7 +131,7 @@ const f = {
       }
     };
 
-    sketch.setupLinesControl = function () {
+    sketch.setupLinesControl = () => {
       // Create the element
       let element = document.createElement("input");
 
@@ -156,7 +156,7 @@ const f = {
       return parseInt(element.value);
     };
 
-    sketch.setupSpeedControl = function () {
+    sketch.setupSpeedControl = () => {
       let element = document.createElement("input");
       let control = createControl(element, {
         name: "Speed",
@@ -173,7 +173,7 @@ const f = {
       return parseFloat(element.value);
     };
 
-    sketch.setupBackgroundControl = function () {
+    sketch.setupBackgroundControl = () => {
       let element = document.createElement("input");
       let control = createControl(element, {
         name: "Background",
@@ -188,7 +188,7 @@ const f = {
       return element.value;
     };
 
-    sketch.setupStrokeControl = function () {
+    sketch.setupStrokeControl = () => {
       let element = document.createElement("input");
       let control = createControl(element, {
         name: "Stroke",
