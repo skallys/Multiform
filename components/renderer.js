@@ -50,7 +50,6 @@ export function init() {
     },
     function (xhr) {
       console.log((xhr.loaded / xhr.total) * 100 + "% loaded");
-      setupCanvasDrawing();
     },
     function (error) {
       console.log("An error happened");
@@ -67,7 +66,7 @@ export function init() {
   const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
   directionalLight.position.set(10, -10, 0);
   scene.add(directionalLight);
-
+  setupCanvasDrawing();
   return true;
 }
 
