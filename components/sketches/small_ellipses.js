@@ -9,7 +9,7 @@ const smallEllipses = {
       cnv.id("drawing-canvas");
       sketch.background(40, 40, 40, 255);
     };
-    sketch.draw = function () {
+    sketch.draw = () => {
       sketch.ellipse(sketch.mouseX, sketch.mouseY, 10, 10);
     };
   }

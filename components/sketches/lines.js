@@ -18,7 +18,7 @@ const lines = {
       sketch.background(hexToRgb(backgroundValues));
       sketch.stroke(hexToRgb(strokeValues));
     };
-    sketch.draw = function () {
+    sketch.draw = () => {
       for (let i = 0; i < sketch.width; i = i + linesValue) {
         sketch.line(i, 0 + offset, i, 0);
       }

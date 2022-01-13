@@ -9,7 +9,7 @@ const rectangles = {
       cnv.id("drawing-canvas");
       sketch.background(0, 255, 255, 255);
     };
-    sketch.draw = function () {
+    sketch.draw = () => {
       sketch.rect(sketch.mouseX, sketch.mouseY, 100, 100);
     };
   }

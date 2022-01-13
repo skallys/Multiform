@@ -10,7 +10,7 @@ let currentSketchControls = [];
 // You may add as many sketches as you want, they will be added to the dropdown and update the renderer. You must however use the same object structure as the examples.
 
 // Sketch 6
-export function createControl(e, options) {
+export const createControl = (e, options) => {
   const controls = document.getElementById("p5-controls");
   let container = document.createElement("div");
   let label = document.createElement("label");
@@ -27,10 +27,10 @@ export function createControl(e, options) {
   controls.appendChild(container);
   currentSketchControls.push(container);
   return value;
-}
+};
 
 // Sketch switching mechanism
-export function switchSketch(n) {
+export const switchSketch = (n) => {
   console.log(sketches);
 
   if (currentSketch) {
@@ -45,4 +45,4 @@ export function switchSketch(n) {
   currentSketch = new p5(sketches[n].sketch, "p5-container");
   // Return active sketch object
   return sketches[n];
-}
+};

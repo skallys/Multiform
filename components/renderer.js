@@ -5,7 +5,7 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
 let camera, scene, renderer, material, targetCanvas;
 
-export function init() {
+export const init = () => {
   // RENDERER
   const rendererElement = document.getElementById("renderer");
   renderer = new THREE.WebGLRenderer({
@@ -42,16 +42,16 @@ export function init() {
   const loader = new GLTFLoader();
   loader.load(
     model,
-    function (gltf) {
+    (gltf) => {
       gltf.scene.position.set(-0.2, 0.05, 0);
       gltf.scene.scale.set(3, 2.5, 3);
       scene.add(gltf.scene);
       setMaterialsOnGLTF(gltf.scene);
     },
-    function (xhr) {
+    (xhr) => {
       console.log((xhr.loaded / xhr.total) * 100 + "% loaded");
     },
-    function (error) {
+    (error) => {
       console.log("An error happened");
     }
   );
@@ -68,9 +68,9 @@ export function init() {
   scene.add(directionalLight);
   setupCanvasDrawing();
   return true;
-}
+};
 
-function setMaterialsOnGLTF(gltfScene) {
+const setMaterialsOnGLTF = (gltfScene) => {
   if (gltfScene.material) {
     gltfScene.material = material;
   }
@@ -80,22 +80,22 @@ function setMaterialsOnGLTF(gltfScene) {
   for (let i = 0; i < gltfScene.children.length; i++) {
     setMaterialsOnGLTF(gltfScene.children[i]);
   }
-}
+};
 
-function setupCanvasDrawing() {
-  setTimeout(function () {
+const setupCanvasDrawing = () => {
+  setTimeout(() => {
     setCanvasTexture();
     animate();
   }, 0);
-}
+};
 
-function animate() {
+const animate = () => {
   requestAnimationFrame(animate);
   material.emissiveMap.needsUpdate = true;
   renderer.render(scene, camera);
-}
+};
 
-export function setCanvasTexture() {
+export const setCanvasTexture = () => {
   targetCanvas = document.getElementById("drawing-canvas");
   material.emissiveMap = new THREE.CanvasTexture(targetCanvas);
-}
+};

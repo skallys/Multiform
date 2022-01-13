@@ -13,7 +13,7 @@ const cat = {
       sketch.background(255, 0, 0, 255);
       img = sketch.loadImage(catImage);
     };
-    sketch.draw = function () {
+    sketch.draw = () => {
       sketch.image(img, sketch.mouseX, sketch.mouseY);
     };
   }
