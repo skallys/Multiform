@@ -1,9 +1,9 @@
 import "./styles/style.css";
 import "./components/sketches/lines";
+import "./components/sketches/random_lines";
 import "./components/sketches/cat";
 import "./components/sketches/small_ellipses";
 import "./components/sketches/rectangles";
-import "./components/sketches/random_ellipses";
 
 import { sketches, switchSketch } from "./components/sketches";
 import { init, setCanvasTexture } from "./components/renderer";
