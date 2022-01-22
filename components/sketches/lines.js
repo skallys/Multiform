@@ -35,7 +35,7 @@ const lines = {
       let element = document.createElement("input");
 
       // Use helper function to create control. First parameter is the control element itself. Second parameter is an object with control attributes. Name property is displayed. createControl returns its label element for display the value.
-      let control = createControl(element, {
+      let control = createControl(element, true, {
         name: "Line Spacing",
         type: "range",
         max: 40,
@@ -57,7 +57,7 @@ const lines = {
 
     sketch.setupSpeedControl = () => {
       let element = document.createElement("input");
-      let control = createControl(element, {
+      let control = createControl(element, true, {
         name: "Speed",
         type: "range",
         max: 4,
@@ -74,7 +74,7 @@ const lines = {
 
     sketch.setupBackgroundControl = () => {
       let element = document.createElement("input");
-      let control = createControl(element, {
+      let control = createControl(element, true, {
         name: "Background",
         type: "color",
         value: "#000000"
@@ -89,7 +89,7 @@ const lines = {
 
     sketch.setupStrokeControl = () => {
       let element = document.createElement("input");
-      let control = createControl(element, {
+      let control = createControl(element, true, {
         name: "Stroke",
         type: "color",
         value: "#ffffff"

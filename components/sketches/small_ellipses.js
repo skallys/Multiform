@@ -10,7 +10,9 @@ const smallEllipses = {
       sketch.background(40, 40, 40, 255);
     };
     sketch.draw = () => {
-      sketch.ellipse(sketch.mouseX, sketch.mouseY, 10, 10);
+      if (sketch.mouseIsPressed) {
+        sketch.ellipse(sketch.mouseX, sketch.mouseY, 10, 10);
+      }
     };
   }
 };

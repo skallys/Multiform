@@ -10,7 +10,7 @@ let currentSketchControls = [];
 // You may add as many sketches as you want, they will be added to the dropdown and update the renderer. You must however use the same object structure as the examples.
 
 // Sketch 6
-export const createControl = (e, options) => {
+export const createControl = (e, labels, options) => {
   const controls = document.getElementById("p5-controls");
   let container = document.createElement("div");
   let label = document.createElement("label");
@@ -20,9 +20,12 @@ export const createControl = (e, options) => {
   for (const attribute in options) {
     e.setAttribute(attribute, options[attribute]);
   }
+
+  if (labels) {
+    container.appendChild(label);
+    label.appendChild(value);
+  }
   value.innerHTML = e.value;
-  container.appendChild(label);
-  label.appendChild(value);
   container.appendChild(e);
   controls.appendChild(container);
   currentSketchControls.push(container);
