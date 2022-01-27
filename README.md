@@ -18,13 +18,13 @@ Créez des maillots génératifs avec P5.js et Three.js. Projet conçu pour le L
 
 2. Ouvrez le dossier téléchargé dans VSCode et ouvrez le terminal
 
-3. Lancez le programme programme avec la commande suivante:
+3. Lancez le programme avec la commande suivante:
 
 ```bash
 npm run dev
 ```
 
-4. Ouvrez votre navigateur à sur [localhost:3000](http://localhost:3000)
+4. Ouvrez votre navigateur sur [localhost:3000](http://localhost:3000)
 
 ## Utilisation
 
