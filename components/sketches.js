@@ -7,9 +7,6 @@ export let sketches = [];
 let currentSketch;
 let currentSketchControls = [];
 
-// You may add as many sketches as you want, they will be added to the dropdown and update the renderer. You must however use the same object structure as the examples.
-
-// Sketch 6
 export const createControl = (e, labels, options) => {
   const controls = document.getElementById("p5-controls");
   let container = document.createElement("div");
