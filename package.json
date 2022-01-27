@@ -1,6 +1,7 @@
 {
-  "name": "uniform",
+  "name": "multiform",
   "version": "0.1.0",
+  "author": "Simon Pinkas",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
