@@ -11,18 +11,55 @@ import { init, setCanvasTexture } from "./components/renderer";
 let currentSketch;
 let rendererIsLoaded = init();
 
-document
-  .getElementById("canvas")
-  .addEventListener("click", function () {
-    let content = this.querySelector("canvas");
-    this.classList.toggle("active");
-    if (this.classList.contains("active")) {
-      console.log(content.style.visibility);
-      content.style.opacity = "1";
-    } else {
-      content.style.opacity = "0";
-    }
+let waitForCanvas = async () => {
+  while (!document.querySelector("#drawing-canvas")) {
+    await new Promise((r) => setTimeout(r, 10));
+  }
+};
+
+window.addEventListener("load", () => {
+  waitForCanvas().then(() => {
+    let controls = document.querySelectorAll(".app-control");
+    controls.forEach((e) => {
+      let target = e.querySelector(".control-target");
+      if (!target.classList.contains("no-hide")) {
+        target.style.opacity = "0";
+        target.style.visbility = "hidden";
+      }
+
+      e.addEventListener("click", function () {
+        this.classList.toggle("active");
+        if (!target.classList.contains("no-hide"))
+          if (this.classList.contains("active")) {
+            target.style.opacity = "1";
+            target.style.display = "block";
+          } else {
+            target.style.opacity = "0";
+            target.style.display = "none";
+          }
+      });
+    });
   });
+
+  // let isCanvasLoaded = setInterval(() => {
+  //   if()
+  // })
+  // controls.forEach((e) => {
+  //   let target = e.querySelector(".control-target");
+  //   console.log(target);
+  // });
+  // document
+  //   .getElementById("canvas")
+  //   .addEventListener("click", function () {
+  //     let content = this.querySelector("canvas");
+  //     this.classList.toggle("active");
+  //     if (this.classList.contains("active")) {
+  //       content.style.opacity = "1";
+  //     } else {
+  //       content.style.opacity = "0";
+  //     }
+  //   });
+});
 
 if (rendererIsLoaded) {
   createSelect();

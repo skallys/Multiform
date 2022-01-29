@@ -9,7 +9,7 @@ body {
 
 select,
 input {
-  width: 100%;
+  width: 80%;
   height: 30px;
 }
 
@@ -23,7 +23,6 @@ input {
 .app-control {
   background: #ffffff;
   border: 2px solid #000000;
-  border-radius: 50px;
   height: 50px;
   width: 50px;
   overflow: hidden;
@@ -54,24 +53,23 @@ input {
 #p5-container {
   overflow: hidden;
   position: absolute;
-  border-radius: 49px;
 }
 
 #p5-container > canvas {
-  border-radius: 40px;
   transition: opacity 0.2s ease-in-out;
 }
 
 #p5-controls {
   padding: 1rem;
   position: absolute;
-  visibility: hidden;
 }
 
 #p5-controls > * {
   margin-bottom: 2rem;
 }
-
+select {
+  margin: 1rem;
+}
 .option label span {
   float: right;
 }

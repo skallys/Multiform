@@ -7,6 +7,8 @@ const rectangles = {
       let cnv = sketch.createCanvas(sketchWidth, 400);
       sketch.pixelDensity(2);
       cnv.id("drawing-canvas");
+      cnv.class("control-target");
+
       sketch.background(0, 255, 255, 255);
     };
     sketch.draw = () => {

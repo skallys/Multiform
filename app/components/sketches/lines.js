@@ -11,6 +11,7 @@ const lines = {
       let cnv = sketch.createCanvas(sketchWidth, 400);
       sketch.pixelDensity(2);
       cnv.id("drawing-canvas");
+      cnv.class("control-target no-hide");
       linesValue = sketch.setupLinesControl();
       speedValue = sketch.setupSpeedControl();
       backgroundValues = sketch.setupBackgroundControl();

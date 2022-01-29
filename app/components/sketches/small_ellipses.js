@@ -7,6 +7,8 @@ const smallEllipses = {
       let cnv = sketch.createCanvas(sketchWidth, 400);
       sketch.pixelDensity(2);
       cnv.id("drawing-canvas");
+      cnv.class("control-target");
+
       sketch.background(40, 40, 40, 255);
     };
     sketch.draw = () => {
