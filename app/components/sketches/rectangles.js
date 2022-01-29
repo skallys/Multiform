@@ -8,11 +8,16 @@ const rectangles = {
       sketch.pixelDensity(2);
       cnv.id("drawing-canvas");
       cnv.class("control-target");
-
       sketch.background(0, 255, 255, 255);
     };
     sketch.draw = () => {
-      sketch.rect(sketch.mouseX, sketch.mouseY, 100, 100);
+      if (
+        document
+          .querySelector(".app-control#canvas")
+          .classList.contains("active")
+      ) {
+        sketch.rect(sketch.mouseX, sketch.mouseY, 100, 100);
+      }
     };
   }
 };
