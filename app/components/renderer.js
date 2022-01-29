@@ -43,8 +43,8 @@ export const init = () => {
   loader.load(
     model,
     (gltf) => {
-      gltf.scene.position.set(-0.2, 0.05, 0);
-      gltf.scene.scale.set(3, 2.5, 3);
+      gltf.scene.position.set(0, 0, 0);
+      gltf.scene.scale.set(3, 3, 3);
       scene.add(gltf.scene);
       setMaterialsOnGLTF(gltf.scene);
     },

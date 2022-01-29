@@ -11,6 +11,19 @@ import { init, setCanvasTexture } from "./components/renderer";
 let currentSketch;
 let rendererIsLoaded = init();
 
+document
+  .getElementById("canvas")
+  .addEventListener("click", function () {
+    let content = this.querySelector("canvas");
+    this.classList.toggle("active");
+    if (this.classList.contains("active")) {
+      console.log(content.style.visibility);
+      content.style.opacity = "1";
+    } else {
+      content.style.opacity = "0";
+    }
+  });
+
 if (rendererIsLoaded) {
   createSelect();
 }

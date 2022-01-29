@@ -11,14 +11,18 @@
   </head>
   <body>
     <div id="app">
-      <aside>
+      <div class="app-control" id="canvas">
         <div id="p5-container"></div>
-        <div id="controls-container">
-          <div id="p5-controls">
-            <select name="" id="sketch-select"></select>
-          </div>
-        </div>
-      </aside>
+      </div>
+
+      <div class="app-control" id="sketch">
+        <select name="" id="sketch-select"></select>
+      </div>
+      <div class="app-control" id="sketch-controls">
+        <div id="p5-controls"></div>
+      </div>
+      <div id="buy">Add to cart</div>
+
       <canvas id="renderer"> </canvas>
     </div>
     <script type="module" src="./app.js"></script>
