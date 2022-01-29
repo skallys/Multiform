@@ -1,15 +1,15 @@
 {
-  "name": "multiform",
-  "version": "0.1.0",
-  "author": "Simon Pinkas",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
-  },
-  "devDependencies": {
-    "p5": "^1.4.0",
-    "three": ">=0.137.0",
-    "vite": "^2.7.2"
-  }
+	"name": "multiform",
+	"version": "0.1.0",
+	"author": "Simon Pinkas",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"preview": "vite preview"
+	},
+	"devDependencies": {
+		"p5": "^1.4.0",
+		"three": ">=0.137.0",
+		"vite": "^2.7.2"
+	}
 }

@@ -5,7 +5,7 @@ export const sketchWidth = 600;
 export let sketches = [];
 
 let currentSketch;
-let currentSketchControls = [];
+export let currentSketchControls = [];
 
 export const createControl = (e, labels, options) => {
   const controls = document.getElementById("p5-controls");

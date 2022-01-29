@@ -5,7 +5,11 @@ import "./components/sketches/cat";
 import "./components/sketches/small_ellipses";
 import "./components/sketches/rectangles";
 
-import { sketches, switchSketch } from "./components/sketches";
+import {
+  currentSketchControls,
+  sketches,
+  switchSketch
+} from "./components/sketches";
 import { init, setCanvasTexture } from "./components/renderer";
 
 let currentSketch;
@@ -21,49 +25,24 @@ window.addEventListener("load", () => {
   waitForCanvas().then(() => {
     let controls = document.querySelectorAll(".app-control");
     controls.forEach((e) => {
-      let target = e.querySelector(".control-target");
-      if (!target.classList.contains("no-hide")) {
-        target.style.opacity = "0";
-        target.style.visbility = "hidden";
-      }
+      let toggle = e.querySelector(".toggle");
+      e.addEventListener("mouseup", () => {
+        if (!e.classList.contains("active")) {
+          e.classList.add("active");
+        }
+      });
 
-      e.addEventListener("click", function () {
-        this.classList.toggle("active");
-        if (!target.classList.contains("no-hide"))
-          if (this.classList.contains("active")) {
-            target.style.opacity = "1";
-            target.style.display = "block";
-          } else {
-            target.style.opacity = "0";
-            target.style.display = "none";
-          }
+      toggle.addEventListener("click", (event) => {
+        if (e.classList.contains("active")) {
+          e.classList.remove("active");
+        }
       });
     });
   });
-
-  // let isCanvasLoaded = setInterval(() => {
-  //   if()
-  // })
-  // controls.forEach((e) => {
-  //   let target = e.querySelector(".control-target");
-  //   console.log(target);
-  // });
-  // document
-  //   .getElementById("canvas")
-  //   .addEventListener("click", function () {
-  //     let content = this.querySelector("canvas");
-  //     this.classList.toggle("active");
-  //     if (this.classList.contains("active")) {
-  //       content.style.opacity = "1";
-  //     } else {
-  //       content.style.opacity = "0";
-  //     }
-  //   });
+  if (rendererIsLoaded) {
+    createSelect();
+  }
 });
-
-if (rendererIsLoaded) {
-  createSelect();
-}
 
 // Create select dropdown
 function createSelect() {
