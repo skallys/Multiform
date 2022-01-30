@@ -5,21 +5,12 @@ import "./components/sketches/cat";
 import "./components/sketches/small_ellipses";
 import "./components/sketches/rectangles";
 
-import {
-  currentSketchControls,
-  sketches,
-  switchSketch
-} from "./components/sketches";
+import { sketches, switchSketch } from "./components/sketches";
 import { init, setCanvasTexture } from "./components/renderer";
+import { waitForCanvas } from "./components/utils";
 
 let currentSketch;
 let rendererIsLoaded = init();
-
-let waitForCanvas = async () => {
-  while (!document.querySelector("#drawing-canvas")) {
-    await new Promise((r) => setTimeout(r, 10));
-  }
-};
 
 window.addEventListener("load", () => {
   waitForCanvas().then(() => {

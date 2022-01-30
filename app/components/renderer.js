@@ -2,6 +2,7 @@ import model from "../models/jersey/scene.glb";
 import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+import { waitForCanvas } from "./utils";
 
 let camera, scene, renderer, material, targetCanvas;
 
@@ -82,11 +83,11 @@ const setMaterialsOnGLTF = (gltfScene) => {
   }
 };
 
-const setupCanvasDrawing = () => {
-  setTimeout(() => {
+const setupCanvasDrawing = async () => {
+  await waitForCanvas().then(() => {
     setCanvasTexture();
     animate();
-  }, 0);
+  });
 };
 
 const animate = () => {

@@ -8,3 +8,9 @@ export const hexToRgb = (hex) => {
     .match(/.{2}/g)
     .map((x) => parseInt(x, 16));
 };
+
+export const waitForCanvas = async () => {
+  while (!document.querySelector("#drawing-canvas")) {
+    await new Promise((r) => setTimeout(r, 10));
+  }
+};
