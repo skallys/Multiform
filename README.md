@@ -6,6 +6,7 @@ Créez des maillots génératifs avec P5.js et Three.js. Projet conçu pour le L
 - [Installation](#installation)
 - [Utilisez votre propre sketch](#utilisation)
 - [Controls](#controls)
+- [Structure](#structure)
 
 ## Pré-requis
 
@@ -29,7 +30,7 @@ npm run dev
 
 ## Utilisation
 
-Les sketchs P5.js se trouvent dans le dossier **components/sketches/**. Pour créer un nouveau un sketch, dupliquez un de ceux déjà créés. Le plus simple est **rectangle.js**.
+Les sketchs P5.js se trouvent dans le dossier **app/components/sketches/**. Pour créer un nouveau un sketch, dupliquez un de ceux déjà créés. Le plus simple est **rectangle.js**.
 
 Pour que le système enregistre le fait que vous avez créé un nouveau sketch, il faudra ajouter quelques petites choses.
 
@@ -64,7 +65,7 @@ const mon_nouveau_sketch = {
 sketches.push(mon_nouveau_sketch);
 ```
 
-6. Ajoutez votre sketch au fichier **main.js**
+6. Ajoutez votre sketch au fichier **app/app.js**
 
 ```javascript
 import "./components/sketches/mon_nouveau_sketch";
@@ -83,3 +84,14 @@ createControl(element, label, attributes);
 **label**: true ou false. Souhaitez-vous afficher les valeurs de l'input?
 
 **attributes**: Objet contenant les attributs de l'élément.
+
+## Structure
+
+Le projet est déjà configué de telle sorte que le code de la homepage et le code de l'app soient séparés.
+Tout ce qui est relatif à l'app se trouve dans le dossier **app**. Les styles de l'app se trouvent dans **app/styles/style.css**
+
+Le code de la homepage (votre page promotionelle) se trouve à la racine du projet. La feuille de style se trouve également dans le fichier **styles/style.css**. Vous pouvez sans autre éditer le fichier **index.html**, mais ne touchez pas à la ligne qui importe le fichier **main.js**, celui-ci est indispensable au lancement du projet avec Vite.
+
+```html
+<script type="module" src="./main.js"></script>
+```
