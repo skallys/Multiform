@@ -6,7 +6,9 @@ const smallEllipses = {
     //namespacing
     sketch.setup = () => {
       let cnv = sketch.createCanvas(sketchWidth, 400);
+      //pas besoin de toucher
       sketch.pixelDensity(2);
+      //Création d'une id et d'une classe pour plus tard
       cnv.id("drawing-canvas");
       cnv.class("control-target");
 
