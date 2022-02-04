@@ -385,7 +385,12 @@ form {
 }
 
 .form1 {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.form11 {
+  font-size: 1rem;
 }
 
 .container {
@@ -412,5 +417,14 @@ input[type="text"] {
 }
 
 input[type="submit"] {
-  width: 50%;
+  margin-top: 3vh;
+  width: 35%;
+  border-radius: 40px;
+  font-family: "favorit";
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--white);
+  background-color: var(--black);
+  border-style: none;
+  padding: 10px;
 }
