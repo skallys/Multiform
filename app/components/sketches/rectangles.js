@@ -11,6 +11,7 @@ const rectangles = {
       sketch.background(0, 255, 255, 255);
     };
     sketch.draw = () => {
+      // Prevent drawing if div containing canvas is not active.
       if (
         document
           .querySelector(".app-control#canvas")

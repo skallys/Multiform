@@ -1,9 +1,11 @@
 import "./styles/style.css";
+
 import "./components/sketches/lines";
 import "./components/sketches/random_lines";
 import "./components/sketches/cat";
 import "./components/sketches/small_ellipses";
 import "./components/sketches/rectangles";
+import "./components/sketches/multi_line";
 
 import { sketches, switchSketch } from "./components/sketches";
 import { init, setCanvasTexture } from "./components/renderer";
@@ -38,7 +40,7 @@ window.addEventListener("load", () => {
 // Create select dropdown
 function createSelect() {
   // Default sketch
-  currentSketch = switchSketch(0);
+  currentSketch = switchSketch(5);
 
   // Get <select> element from DOM
   const selectElement = document.getElementById("sketch-select");
