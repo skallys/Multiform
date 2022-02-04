@@ -1,0 +1,22 @@
+1. POURQUOI J?ARRIVE PAS à ALIGNER COMME JE VEUX MES BOUTONS EN SAVOIR PLUS ?
+2. Comment je peux déjà prendre de l'avance pour l'interface de la web app ?
+3. Comment améliorer l'interface de la section 4 (aka le call back pour l'éditeur)
+
+
+// RESTE A FAIRE
+- introduire les svg (picto + création typographique)
+- faire la vidéo
+- introduire la vidéo
+- choisir sponsor/collaboration pour le footer
+- modéliser la borne en 3D
+- préparer la présentation
+
+
+//Mettre dès le début les clubs qui nous utilise déjà
+
+// news & events liste d'événements
+
+//section 2-3 à inverser
+leur enlever les boutons en savoir plus
+
+//mettre une inscription à la newsletter dans le footer
