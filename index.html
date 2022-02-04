@@ -3,13 +3,112 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
+    <link rel="stylesheet" href="styles/homepage.css" />
+    <link rel="stylesheet" href="styles/common.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Homepage</title>
   </head>
   <body>
+    <!-- navigation -->
+    <nav>
+      <div id="logo">
+        <h6>MULTIFORM</h6>
+      </div>
+      <h2 class="navi">Galeries</h2>
+      <h2 class="navi">Éditeur</h2>
+      <h2 class="navi">News</h2>
+      <h2 class="navi">Contacts</h2>
+      <div class="nav-icons">
+        <div id="panier" class="nav-icon"></div>
+        <div id="compte" class="nav-icon"></div>
+      </div>
+    </nav>
+
+    <!-- section 1 -->
+    <section class="edithp">
+      <div id="teaser">
+        <div class="sbd"></div>
+        <div class="video"></div>
+      </div>
+      <div id="go-edit">
+        <h1>UTILISER L'ÉDITEUR<br />DE MAILLOTS SPORTIFS</h1>
+        <a class="creer-btn" href="./app/">
+          <div class="creer-shape">
+            <h3>CRÉER</h3>
+          </div>
+        </a>
+      </div>
+      <div id="ligne1"></div>
+    </section>
+
+    <!-- section 2 -->
+    <section id="news">
+      <div id="img1"></div>
+      <div id="go-news">
+        <div id="title1">
+          <h1>NEWS &<br />ÉVÉNEMENTS</h1>
+        </div>
+        <!--BUG AVEC LE BTN-->
+        <div id="details1">
+          <p>
+            'MULTIFORM', l'Unique sous toutes ses formes, présent pour vous<br />et
+            par vous à tous vos événements sportifs favoris comme à la maison.
+          </p>
+          <a class="savoir-plus" href="#">
+            <div class="savoir-plus-shape">
+              <h3>EN SAVOIR PLUS</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- section 3 -->
+    <section id="about">
+      <div id="img2"></div>
+      <div id="go-about">
+        <div id="title2">
+          <h1>À PROPOS<br />DE NOUS</h1>
+        </div>
+        <!--BUG AVEC LE BTN-->
+        <div id="details2">
+          <p>
+            L'éditeur 'MULTIFORM', l'innovation de l'esthétisme<br />de vos
+            équipements sportifs. Découvrez ses origines,<br />son
+            fonctionnement et son équipe!
+          </p>
+          <a class="savoir-plus" href="#">
+            <div class="savoir-plus-shape">
+              <h3>EN SAVOIR PLUS</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- SECTION 4 -->
+    <div id="ligneHor"></div>
+    <section class="editeur">
+      <div id="visual"></div>
+      <div id="go-edit2">
+        <h1>RENDRE UNIQUE SON<br />MAILLOT SPORTIF!</h1>
+        <a class="creer-btn" href="./app/">
+          <div class="creer-shape">
+            <h3>CRÉER</h3>
+          </div>
+        </a>
+      </div>
+      <div id="ligne3"></div>
+    </section>
+    <!-- footer -->
+    <footer>
+      <div class="footer-items">
+        <h6 class="footer">MULTIFORM</h6>
+        <h5 class="footer">Éditeur</h5>
+        <h5 class="footer">News</h5>
+        <h5 class="footer">Galeries</h5>
+        <h5 class="footer">Contact</h5>
+      </div>
+    </footer>
+    <script src="homepage.js"></script>
     <a href="./app/">Go to Multiform app</a>
     <script type="module" src="./main.js"></script>
   </body>

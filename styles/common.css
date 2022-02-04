@@ -1,0 +1,110 @@
+/*IMPORTS DES FONTS*/
+/* IMPORT font du logo (ABCWhyte-super) */
+@font-face {
+  font-family: "logo";
+  src: url("../assets/fonts/ABCWhyte-Super-Trial.woff") format("woff"),
+    url("../assets/fonts/ABCWhyte-Super-Trial.woff2") format("woff2");
+}
+
+/* IMPORT font du texte (ABCFavorit-regular)*/
+@font-face {
+  font-family: "favorit";
+  src: url("../assets/fonts/ABCFavorit-Regular-Trial.woff") format("woff"),
+    url("../assets/fonts/ABCFavorit-Regular-Trial.woff2") format("woff2");
+  font-weight: 400;
+}
+
+/* IMPORT font du texte (ABCFavorit-bold)*/
+@font-face {
+  font-family: "favorit";
+  src: url("../assets/fonts/ABCFavorit-Bold-Trial.woff") format("woff"),
+    url("../assets/fonts/ABCFavorit-Bold-Trial.woff2") format("woff2");
+  font-weight: 700;
+}
+
+/* LES VARIABLES POUR LES COULEURS */
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --grey: #929292;
+}
+/*COMMENT UTILISER LES VARIABLES*/
+/*
+      background-color: var(--black);
+      color: var(--white);
+      border-color: var(--grey); 
+      */
+
+/* body toujours sans marge */
+body {
+  margin: 0;
+}
+
+h6 {
+  font-family: "logo";
+  font-size: 2rem;
+  color: var(--black);
+  cursor: pointer;
+  margin: 0;
+}
+
+h1 {
+  font-family: "favorit";
+  font-size: 3.5rem;
+  color: var(--black);
+  cursor: pointer;
+  margin: 0;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-family: "favorit";
+  font-weight: 700;
+  margin: 0;
+}
+
+h2 {
+  font-size: 2rem;
+  font-family: "favorit";
+  font-weight: 400;
+  margin: 0;
+}
+
+p {
+  font-size: 1.5rem;
+  font-family: "favorit";
+  font-weight: 400;
+  margin: 0;
+}
+
+h5 {
+  font-size: 1.5rem;
+  font-family: "favorit";
+  font-weight: 400;
+  margin: 0;
+}
+
+/*  SAVOIR PLUS BOUTON */
+
+.savoir-plus {
+  align-self: end;
+  text-decoration: none;
+  color: var(--white);
+}
+
+.savoir-plus-shape {
+  background-color: var(--black);
+  border-radius: 40px;
+  width: 240px;
+  display: flex;
+  justify-content: center;
+  height: 50px;
+}
+
+.savoir-plus-shape h3 {
+  margin: 10px;
+}
+
+.savoir-plus-shape:hover {
+  scale: 102%;
+}
