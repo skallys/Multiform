@@ -1,4 +1,3 @@
-1. POURQUOI J?ARRIVE PAS à ALIGNER COMME JE VEUX MES BOUTONS EN SAVOIR PLUS ?
 2. Comment je peux déjà prendre de l'avance pour l'interface de la web app ?
 3. Comment améliorer l'interface de la section 4 (aka le call back pour l'éditeur)
 
