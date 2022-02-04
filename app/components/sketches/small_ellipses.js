@@ -3,6 +3,7 @@ import { sketches, sketchWidth } from "../sketches";
 const smallEllipses = {
   name: "Small Ellipses",
   sketch: (sketch) => {
+    //namespacing
     sketch.setup = () => {
       let cnv = sketch.createCanvas(sketchWidth, 400);
       sketch.pixelDensity(2);
