@@ -43,6 +43,16 @@ nav h2 {
   cursor: pointer;
 }
 
+/* pictos */
+.white-fill {
+  fill: #fff;
+}
+
+.white-stroke {
+  fill: #000;
+  stroke: #fff;
+  stroke-width: 18px;
+}
 /* SECTION 1 */
 
 .edithp {

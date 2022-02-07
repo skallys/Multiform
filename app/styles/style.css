@@ -29,6 +29,10 @@ body {
 
 /* DROITE */
 
+#droite {
+  background-color: var(--grey);
+}
+
 select,
 input {
   width: 90%;
