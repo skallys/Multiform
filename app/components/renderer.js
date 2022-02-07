@@ -19,7 +19,8 @@ export const init = () => {
     rendererElement.clientHeight
   );
 
-  // CAMERA
+  // CAMERA 
+  //saloua: ici pour que le jersey ne soit pas déformé: (window.innerWidth/100)*66.7) /100 + *66.7 c'est pour que celà entre bien dans la fenêtre qui fait 66.7% de la taille de la fenêtre.
   camera = new THREE.PerspectiveCamera(
     50,
     ((window.innerWidth / 100) * 66.7) / window.innerHeight,
