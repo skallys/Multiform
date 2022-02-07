@@ -17,3 +17,4 @@
 !!!!-!!!!
 1. Corriger le picto panier
 2. CREER l'animation sur le SAME BUT DIFFERENT
+3. COMMENT CHANGER LA WIDTH DU RENDERER
