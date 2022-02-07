@@ -7,29 +7,26 @@
     <title>Multiform App</title>
   </head>
   <body>
-    <div class="app-control" id="canvas">
-      <div class="toggle">
-        <img src="images/x.svg" alt="" srcset="" />
+    <div id="gauche">
+      <canvas id="renderer"> </canvas>
+      <div class="app-control" id="sketch-controls">
+        <div class="toggle">
+          <img src="images/x.svg" alt="" srcset="" />
+        </div>
+        <div id="p5-controls" class="control-target"></div>
       </div>
-      <div id="p5-container"></div>
     </div>
-
-    <div class="app-control" id="sketch">
-      <div class="toggle">
-        <img src="images/x.svg" alt="" srcset="" />
+    <div id="droite">
+      <!-- visuel sur le design -->
+      <div id="canvas">
+        <div id="p5-container"></div>
       </div>
-      <select name="" id="sketch-select" class="control-target"></select>
-    </div>
-    <!--Celle que je vais utiliser-->
-    <div class="app-control" id="sketch-controls">
-      <div class="toggle">
-        <img src="images/x.svg" alt="" srcset="" />
+      <!-- choisir les différents design -->
+      <div id="sketch">
+        <select name="" id="sketch-select" class="control-target"></select>
       </div>
-      <div id="p5-controls" class="control-target"></div>
+      <div id="buy">Add to cart</div>
     </div>
-    <div id="buy">Add to cart</div>
-    <!-- avoir besoin -->
-    <canvas id="renderer"> </canvas>
     <script type="module" src="./app.js"></script>
   </body>
 </html>
