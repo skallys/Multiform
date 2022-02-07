@@ -13,9 +13,7 @@
 
 //Mettre dès le début les clubs qui nous utilise déjà
 
-// news & events liste d'événements
 
-//section 2-3 à inverser
-leur enlever les boutons en savoir plus
-
-//mettre une inscription à la newsletter dans le footer
+!!!!-!!!!
+1. Corriger le picto panier
+2. CREER l'animation sur le SAME BUT DIFFERENT

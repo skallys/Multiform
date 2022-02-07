@@ -34,8 +34,6 @@ nav {
 .nav-icon {
   width: 45px;
   height: 45px;
-  background-color: var(--black);
-  border-radius: 30px;
 }
 
 nav h2 {
@@ -57,6 +55,15 @@ nav h2 {
   grid-template-rows: 600px auto auto;
   grid-gap: 20px;
   margin-bottom: 15vh;
+}
+
+#sameBdiff {
+  width: 110%;
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  align-self: end;
 }
 /* vidéo */
 #teaser {
@@ -149,11 +156,8 @@ nav h2 {
 }
 
 .logo-fc {
-  width: 300px;
+  width: 200px;
   margin: 40px;
-  background-color: var(--white);
-  padding: 40px;
-  border-radius: 50px;
 }
 
 #fc {
