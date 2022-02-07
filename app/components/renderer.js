@@ -22,7 +22,7 @@ export const init = () => {
   // CAMERA
   camera = new THREE.PerspectiveCamera(
     50,
-    window.innerWidth / window.innerHeight,
+    ((window.innerWidth / 100) * 66.7) / window.innerHeight,
     1,
     5000
   );
