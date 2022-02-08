@@ -76,13 +76,22 @@ nav h2 {
   align-self: end;
 }
 
+.samebut {
+  opacity: 1;
+}
+
+.activate {
+  opacity: 0;
+  transition: 0.1s;
+}
+
 /* vidéo */
 #teaser {
   grid-column-start: 1;
   grid-column-end: 6;
   grid-row-start: 2;
   grid-row-end: 3;
-  background-color: var(--black);
+  background-color: var(--grey);
   height: 900px;
 }
 /* infos + bouton */
