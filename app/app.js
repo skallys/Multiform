@@ -23,12 +23,14 @@ window.addEventListener("load", () => {
       e.addEventListener("mouseup", () => {
         if (!e.classList.contains("active")) {
           e.classList.add("active");
+          e.classList.remove("picto");
         }
       });
 
       toggle.addEventListener("click", (event) => {
         if (e.classList.contains("active")) {
           e.classList.remove("active");
+          e.classList.add("picto");
         }
       });
     });

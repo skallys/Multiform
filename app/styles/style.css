@@ -15,6 +15,7 @@ body {
 #gauche {
   grid-column-start: 1;
   grid-column-end: 2;
+  height: 100vh;
 }
 
 #renderer {
@@ -30,18 +31,91 @@ body {
 /* DROITE */
 
 #droite {
-  background-color: var(--grey);
+  background-color: var(--dark);
+  height: 100vh;
 }
 
 select,
 input {
-  width: 90%;
-  height: 30px;
+  width: 80%;
+  height: 20px;
+  margin-left: 8%;
+  font-family: "favorit";
+  border-radius: 30px;
+  border-style: none;
+  padding-right: 10px;
+  height: 40px;
 }
 
-#canvas {
-  width: 70%;
-  padding: 1px;
+/* FORM ET SIZE */
+#jerseySize {
+  height: 35%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.editL {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  justify-content: space-between;
+  height: 35%;
+}
+
+.editI {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+}
+
+/* FORME */
+
+.fema {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border: solid var(--white) 0.5px;
+  cursor: pointer;
+  margin-right: 30px;
+}
+
+.fema p {
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+.fema:hover {
+  background-color: var(--grey);
+}
+
+/* SIZE */
+#xxxl {
+  justify-content: space-between;
+}
+
+.xxl {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border: solid var(--white) 0.5px;
+  cursor: pointer;
+}
+
+.xxl p {
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+.xxl:hover {
+  background-color: var(--grey);
 }
 
 /* la class .app-control permet d'avoir une version "inactive" aka fermée de la fonctionnalité */
@@ -58,8 +132,13 @@ input {
 .app-control.active {
   height: 400px;
   width: 40vw;
+  background-image: none;
 }
 
+.app-control.picto {
+  background-image: url("../../assets/img/rouage.svg");
+  border: none;
+}
 /**/
 /**/
 .app-control .control-target:not(.no-hide) {
