@@ -76,14 +76,20 @@ nav h2 {
   align-self: end;
 }
 
-.samebut {
-  opacity: 1;
+.samebutd {
+  position: relative;
+  right: 41%;
 }
 
 .activate {
   opacity: 0;
   transition: 0.1s;
 }
+/*
+.sbdifferent {
+  position: relative;
+  right: 200px;
+}*/
 
 /* vidéo */
 #teaser {
@@ -154,8 +160,8 @@ nav h2 {
 #sponsor {
   grid-column-start: 1;
   grid-column-end: 6;
-  grid-row-start: 2;
-  grid-row-end: 3;
+  grid-row-start: 4;
+  grid-row-end: 5;
   display: grid;
   grid-template-columns: subgrid;
   grid-template-rows: auto auto;
@@ -194,8 +200,8 @@ nav h2 {
 #about {
   grid-column-start: 1;
   grid-column-end: 6;
-  grid-row-start: 3;
-  grid-row-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
   display: grid;
   grid-template-columns: subgrid;
   grid-template-rows: 900px 400px;
@@ -247,8 +253,8 @@ nav h2 {
 #news {
   grid-column-start: 1;
   grid-column-end: 6;
-  grid-row-start: 4;
-  grid-row-end: 5;
+  grid-row-start: 3;
+  grid-row-end: 4;
   display: grid;
   grid-template-columns: subgrid;
   grid-template-rows: 900px 400px;

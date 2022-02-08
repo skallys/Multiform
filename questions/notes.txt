@@ -28,3 +28,13 @@
 2. Styliser le selecteur
 3. Pourquoi il y a une réaction chelou avec le picto de la flèche (back-btn)
 4. mettre en grey les border btn radio
+
+
+TEXTE 
+- logo des club à mettre plus bas Avec news et event (pour résoudre le same but different)
+- A propos de nous à changer - FAITES LA DIFFÉRENCE !
+    Devenez le créateur de vos propres équipements [...]
+- News and evenements - Participez à nos prochains événements
+- Rendez unique vos maillots sportifs
+
+
