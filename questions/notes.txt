@@ -17,3 +17,5 @@
 !!!!-!!!!
 1. CREER l'animation sur le SAME BUT DIFFERENT
 2. Styliser le selecteur
+3. Pourquoi il y a une réaction chelou avec le picto de la flèche (back-btn)
+4.

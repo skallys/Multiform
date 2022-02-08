@@ -10,12 +10,25 @@ body {
   display: grid;
   grid-template-columns: 66.7% 33.3%;
   grid-gap: 20px;
+  background-color: var(--black);
 }
 /* GAUCHE */
 #gauche {
   grid-column-start: 1;
   grid-column-end: 2;
   height: 100vh;
+}
+
+#back-btn {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  top: 30px;
+  left: 30px;
+}
+
+#back-btn:hover {
+  scale: 102%;
 }
 
 #renderer {
@@ -31,7 +44,7 @@ body {
 /* DROITE */
 
 #droite {
-  background-color: var(--dark);
+  background-color: var(--white);
   height: 100vh;
 }
 
@@ -45,6 +58,7 @@ input {
   border-style: none;
   padding-right: 10px;
   height: 40px;
+  margin-top: 20px;
 }
 
 /* FORM ET SIZE */
@@ -59,7 +73,7 @@ input {
 .editL {
   display: flex;
   flex-direction: column;
-  color: white;
+  color: var(--black);
   justify-content: space-between;
   height: 35%;
 }
@@ -79,7 +93,7 @@ input {
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  border: solid var(--white) 0.5px;
+  border: solid var(--black) 0.5px;
   cursor: pointer;
   margin-right: 30px;
 }
@@ -91,6 +105,7 @@ input {
 
 .fema:hover {
   background-color: var(--grey);
+  color: var(--white);
 }
 
 /* SIZE */
@@ -105,7 +120,7 @@ input {
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  border: solid var(--white) 0.5px;
+  border: solid var(--black) 0.5px;
   cursor: pointer;
 }
 
@@ -116,6 +131,7 @@ input {
 
 .xxl:hover {
   background-color: var(--grey);
+  color: var(--white);
 }
 
 /* la class .app-control permet d'avoir une version "inactive" aka fermée de la fonctionnalité */
@@ -139,13 +155,39 @@ input {
   background-image: url("../../assets/img/rouage.svg");
   border: none;
 }
-/**/
+
+.app-control.picto:hover {
+  scale: 102%;
+}
+
+/* add panier btn */
+#addpanier {
+  width: 50px;
+  margin-left: 20px;
+  margin-top: 40px;
+}
+
+/* commander btn */
+#buy {
+  background-color: var(--black);
+  border-radius: 30px;
+  color: var(--white);
+  padding: 1rem;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+#buy:hover {
+  scale: 102%;
+}
+
 /**/
 .app-control .control-target:not(.no-hide) {
   display: none;
   opacity: 0;
 }
-/**/
+
 .app-control.active .control-target:not(.no-hide) {
   display: block;
   opacity: 1;
@@ -179,13 +221,4 @@ input {
 
 .option label span {
   float: right;
-}
-
-#buy {
-  background-color: #ffffff;
-  border: 2px solid #000000;
-  padding: 1rem;
-  position: absolute;
-  bottom: 1rem;
-  right: 1rem;
 }
