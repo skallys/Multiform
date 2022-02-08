@@ -14,8 +14,17 @@
 //Mettre dès le début les clubs qui nous utilise déjà
 
 
+
+// RESTE À FAIRE 08-02-2022 :
+- Modélisation 3D de la borne
+- Animation avec le scroll sur le same but different
+- vidéo avec le jersey qui tourne sur lui-même pour la section 1 de la homepage
+- coder les design en P5 js
+- intégrer les designs pour la web app  
+- slide shows
+
 !!!!-!!!!
 1. CREER l'animation sur le SAME BUT DIFFERENT
 2. Styliser le selecteur
 3. Pourquoi il y a une réaction chelou avec le picto de la flèche (back-btn)
-4.
+4. mettre en grey les border btn radio

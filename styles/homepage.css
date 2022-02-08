@@ -75,6 +75,7 @@ nav h2 {
   grid-row-end: 2;
   align-self: end;
 }
+
 /* vidéo */
 #teaser {
   grid-column-start: 1;

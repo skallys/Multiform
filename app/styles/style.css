@@ -59,7 +59,16 @@ input {
   padding-right: 10px;
   height: 40px;
   margin-top: 20px;
+  background-color: var(--grey);
 }
+
+/* 
+POUR ENLEVER LE STYLE PAR DEFAUT DU SELECT
+outline: none;
+-moz-appearance:none;
+-webkit-appearance:none;
+appearance: none;
+*/
 
 /* FORM ET SIZE */
 #jerseySize {
