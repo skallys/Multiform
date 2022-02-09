@@ -20,8 +20,10 @@ window.addEventListener('scroll', function(){
         sameBut.classList.remove('activate')
     }
 
-    console.log(lav)
+    //console.log(lav)
     //sameBut.style.transform = "scale(100 * " + val + ")" ;
 });
 
+const grille = document.querySelector("#ligne20")
 
+console.log(grille.style.left.value)

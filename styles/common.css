@@ -28,6 +28,11 @@
   --white: #ffffff;
   --grey: #929292;
   --dark: #242424;
+  --gr1: calc(100vw - 120px);
+  --gr2: calc((100vw + 83px) / 3);
+  --fil1: calc(var(--gr2) - 120px);
+  --fil2: calc(var(--gr2) - var(--fil1));
+  --fil3: calc(var(--gr2) - 100px);
 }
 /*COMMENT UTILISER LES VARIABLES*/
 /*

@@ -78,7 +78,15 @@ nav h2 {
 
 .samebutd {
   position: relative;
-  right: 41%;
+  right: 28.74%;
+  z-index: 100;
+}
+
+.sbdifferent {
+  scale: 84.3%;
+  position: relative;
+  right: -4.37%;
+  z-index: 100;
 }
 
 .activate {
@@ -92,6 +100,70 @@ nav h2 {
 }*/
 
 /* vidéo */
+#lignes {
+  grid-column-start: 1;
+  grid-column-end: 6;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  display: grid;
+  grid-template-columns: 100px 1fr 1fr 1fr 100px;
+  grid-gap: 20px;
+  grid-template-rows: auto;
+}
+
+.filtres {
+  position: relative;
+  height: 900px;
+}
+
+/*
+#filtre10 {
+  background-color: yellow;
+  opacity: 0.2;
+  width: var(--fil1);
+  left: var(--fil2);
+}*/
+
+#ligne10 {
+  left: 100px;
+}
+
+/*
+#filtre20 {
+  background-color: magenta;
+  opacity: 0.2;
+  width: var(--fil1);
+  left: var(--fil3);
+}*/
+
+#ligne20 {
+  left: var(--gr2);
+}
+
+/*
+#filtre30 {
+  left: var(--fil4);
+  background-color: yellow;
+  opacity: 0.2;
+  width: var(--fil1);
+}*/
+
+#ligne30 {
+  right: var(--gr2);
+}
+
+#ligne40 {
+  left: var(--gr1);
+}
+
+.lignes {
+  width: 20px;
+  background-color: var(--white);
+  height: 900px;
+  position: absolute;
+  z-index: 1;
+}
+
 #teaser {
   grid-column-start: 1;
   grid-column-end: 6;
@@ -99,6 +171,10 @@ nav h2 {
   grid-row-end: 3;
   background-color: var(--grey);
   height: 900px;
+  width: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: -10;
 }
 /* infos + bouton */
 #go-edit {
