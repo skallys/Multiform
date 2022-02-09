@@ -56,10 +56,24 @@ input {
   font-family: "favorit";
   border-radius: 30px;
   border-style: none;
-  padding-right: 10px;
   height: 40px;
   margin-top: 20px;
   background-color: var(--grey);
+}
+
+select {
+  outline: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  display: flex;
+  padding-left: 10px;
+  color: var(--white);
+  background-color: black;
+  background-image: url("../../assets/img/F_d2.svg");
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: right 10px center;
 }
 
 /* 
@@ -112,7 +126,7 @@ appearance: none;
   font-size: 1.2rem;
 }
 
-.fema:hover {
+.femaActive {
   background-color: var(--grey);
   color: var(--white);
 }
@@ -138,7 +152,7 @@ appearance: none;
   font-size: 1.2rem;
 }
 
-.xxl:hover {
+.xxlActive {
   background-color: var(--grey);
   color: var(--white);
 }
@@ -174,6 +188,10 @@ appearance: none;
   width: 50px;
   margin-left: 20px;
   margin-top: 40px;
+}
+
+#addpanier:hover {
+  scale: 102%;
 }
 
 /* commander btn */

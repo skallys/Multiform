@@ -66,3 +66,41 @@ function createSelect() {
     setCanvasTexture();
   });
 }
+
+
+//tester pour que ce soit comme des boutons radio
+
+const formBtn = document.querySelector(".fema");
+const sizeBtn = document.querySelectorAll(".xxl");
+
+
+formBtn.forEach(fBtn => {
+  fBtn.addEventListener("click", function(){
+    if (fBtn.classList.contains("femaActive")){
+      fBtn.classList.remove("femaActive")
+    } else {
+      fBtn.classList.add("femaActive")
+    }
+  })
+})
+
+sizeBtn.forEach(sBtn => {
+  sBtn.addEventListener("click", function(){
+    if(sBtn.classList.containes("xxlActive")){
+      sBtn.classList.remove("xxlActive")
+    } else {
+      fBtn.classList.add("xxlActive")
+    }
+  })
+})
+
+
+
+//juste un bouton fonctionne
+//formBtn.addEventListener("click", function(){
+  //if (formBtn.classList.contains("femaActive")){
+    //formBtn.classList.remove("femaActive")
+  //} else {
+    //formBtn.classList.add("femaActive")
+  //}
+//})
