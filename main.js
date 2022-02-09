@@ -5,6 +5,7 @@ import "./styles/common.css";
 
 const sameBut = document.querySelector('.samebutd');
 const diff = document.querySelector('.sbdifferent');
+const nav = document.querySelector('nav');
 
 window.addEventListener('scroll', function(){ 
     const scrolled = window.pageYOffset;
@@ -20,10 +21,29 @@ window.addEventListener('scroll', function(){
         sameBut.classList.remove('activate')
     }
 
-    //console.log(lav)
+    if(val > 1060 && val < 1511){
+        nav.style.color = 'var(--white)';
+    } else if(val > 1813 && val < 2259){ 
+        nav.style.color = 'var(--white)';
+    } else if(val >2557 && val < 2819){ 
+        nav.style.color = 'var(--white)';
+    } else {
+        nav.style.color = 'var(--black)'
+    }
+
+    console.log(val)
     //sameBut.style.transform = "scale(100 * " + val + ")" ;
 });
 
 const grille = document.querySelector("#ligne20")
 
 console.log(grille.style.left.value)
+
+//if(val > 1813 && val < 2259) { nav.style.color = 'var(--white)' }
+
+//pictoL.forEach(function(picto){picto.style.fill = 'var(--black)'})
+
+// pictoF.forEach(function(pict){
+//    pict.style.fill = 'var(--white)'
+//    pict.style.stroke = 'var(--black)'
+//})

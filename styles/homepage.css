@@ -22,6 +22,8 @@ nav {
   margin-left: 120px;
   margin-right: 120px;
   z-index: 100;
+  color: var(--black);
+  transition: 0.15s;
 }
 
 .nav-icons {
@@ -39,18 +41,17 @@ nav {
 nav h2 {
   font-family: "favorit";
   font-weight: 400;
-  color: var(--black);
   cursor: pointer;
 }
 
 /* pictos */
 .white-fill {
-  fill: #fff;
+  fill: var(--white);
 }
 
 .white-stroke {
-  fill: #000;
-  stroke: #fff;
+  fill: var(--black);
+  stroke: var(--white);
   stroke-width: 18px;
 }
 /* SECTION 1 */
@@ -292,7 +293,7 @@ nav h2 {
   grid-row-end: 2;
   background-image: url("../assets/img/img-section3.jpg");
   background-size: cover;
-  z-index: 100;
+  z-index: -100;
 }
 
 #go-about {
