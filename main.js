@@ -1,13 +1,9 @@
 import "./styles/homepage.css";
 import "./styles/common.css";
 
-//0 - 625 = scrolled
-
 const sameBut = document.querySelector('.samebutd');
 const diff = document.querySelector('.sbdifferent');
 const nav = document.querySelector('nav');
-const accr1 = document.querySelector('#accroche1');
-const accr2 = document.querySelector('#accroche2');
 
 window.addEventListener('scroll', function(){ 
     const scrolled = window.pageYOffset;
@@ -32,14 +28,15 @@ window.addEventListener('scroll', function(){
     } else {
         nav.style.color = 'var(--black)'
     }
-
-    console.log(val)
-    //sameBut.style.transform = "scale(100 * " + val + ")" ;
+    //console.log(val)
 });
 
-const grille = document.querySelector("#ligne20")
 
-console.log(grille.style.left.value)
+
+
+
+
+
 
 //if(val > 1813 && val < 2259) { nav.style.color = 'var(--white)' }
 

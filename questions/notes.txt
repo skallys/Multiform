@@ -43,3 +43,4 @@ TEXTE
 2. pourquoi ma boucle pour form et size ne marche pas
 3. recalculer pour la nav
 4. Pourquoi il y a une réaction chelou avec le picto de la flèche (back-btn)
+5. comment stylisé l'interieur du select (les options)

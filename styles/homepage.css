@@ -116,16 +116,13 @@ nav h2 {
   position: relative;
   height: 900px;
 }
-
-/*
-#filtre10 {
+*/ #filtre10 {
   background-color: yellow;
   opacity: 0.2;
   width: var(--fil1);
   left: var(--fil2);
-}*/
-
-#ligne10 {
+}
+*/ #ligne10 {
   left: 100px;
 }
 
@@ -539,4 +536,17 @@ input[type="submit"] {
   background-color: var(--black);
   border-style: none;
   padding: 10px;
+}
+
+/* ANIMATION DES ACCROCHES */
+
+.accroches {
+  opacity: 0;
+  transform: translateY(-30px);
+}
+
+.accroches-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: 1s;
 }
