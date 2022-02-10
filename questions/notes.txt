@@ -54,7 +54,7 @@ TEXTE
 
 //image t-shirt du bas trop petite (aggrandire)
 
-/confiance crew -> Ils nous font confiances 
+//confiance crew -> Ils nous font confiances 
 
 // revoir pour le footer inverser les couleur
 avec cadre en haut et en bas (deux lignes)
