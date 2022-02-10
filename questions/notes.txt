@@ -37,4 +37,8 @@ TEXTE
 - News and evenements - Participez à nos prochains événements
 - Rendez unique vos maillots sportifs
 
+10/02/2022
 
+1. pourquoi les logo des fc ne sont pas visible sur netlify
+2. pourquoi ma boucle pour form et size ne marche pas
+3. recalculer pour la nav
