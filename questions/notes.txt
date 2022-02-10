@@ -58,3 +58,5 @@ TEXTE
 
 // revoir pour le footer inverser les couleur
 avec cadre en haut et en bas (deux lignes)
+
+The coding train
