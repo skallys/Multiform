@@ -46,6 +46,4 @@ TEXTE
 5. comment stylisé l'interieur du select (les options)
 
 //CORRIGER 
-
-Espacements accroches avec image du dessus
-picto à faire pointer dans nav
+la nav utiliser un observer

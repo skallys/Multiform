@@ -19,11 +19,11 @@ window.addEventListener('scroll', function(){
         sameBut.classList.remove('activate')
     }
 
-    if(val > 1060 && val < 1511){
+    if(val > 1070 && val < 1521){
         nav.style.color = 'var(--white)';
-    } else if(val > 1813 && val < 2259){ 
+    } else if(val > 1821 && val < 2272){ 
         nav.style.color = 'var(--white)';
-    } else if(val >2557 && val < 2819){ 
+    } else if(val >2574 && val < 2826){ 
         nav.style.color = 'var(--white)';
     } else {
         nav.style.color = 'var(--black)'
