@@ -28,6 +28,7 @@
   --white: #ffffff;
   --grey: #929292;
   --dark: #242424;
+  --pink: #fb5686;
   --gr1: calc(100vw - 120px);
   --gr2: calc((100vw + 83px) / 3);
   --fil1: calc(var(--gr2) - 120px);
