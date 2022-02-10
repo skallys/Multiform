@@ -43,3 +43,18 @@ TEXTE
 5. comment stylisé l'interieur du select (les options)
 
 //CORRIGER 
+
+
+// peut-être rendre plus long les anim sur les accroches
+// Revoir les boutons FORM et SIZE (trop espacé plus la forme pas ouf)
+// revoir le truc de la commander donc enlever commander, agrandire le add au panier et le mettre à la place du commander
+// revoir mettre une transition sur la transition pour le menu réglage
+// aligner les form et size au choix du design
+
+
+//image t-shirt du bas trop petite (aggrandire)
+
+/confiance crew -> Ils nous font confiances 
+
+// revoir pour le footer inverser les couleur
+avec cadre en haut et en bas (deux lignes)

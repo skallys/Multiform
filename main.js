@@ -1,5 +1,6 @@
 import "./styles/homepage.css";
 import "./styles/common.css";
+import "./accroches";
 
 const sameBut = document.querySelector('.samebutd');
 const diff = document.querySelector('.sbdifferent');

@@ -1,5 +1,5 @@
-import "./styles/homepage.css";
-import "./styles/common.css";
+// import "./styles/homepage.css";
+// import "./styles/common.css";
 
 const ratio = .1
 const options = {
