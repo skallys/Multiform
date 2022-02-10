@@ -24,10 +24,10 @@
 - slide shows
 
 !!!!-!!!!
-1. CREER l'animation sur le SAME BUT DIFFERENT
-2. Styliser le selecteur
+1. CREER l'animation sur le SAME BUT DIFFERENT DONE
+2. Styliser le selecteur DONE
 3. Pourquoi il y a une réaction chelou avec le picto de la flèche (back-btn)
-4. mettre en grey les border btn radio
+4. mettre en grey les border btn radio ALMOSTE
 
 
 TEXTE 
@@ -42,3 +42,4 @@ TEXTE
 1. pourquoi les logo des fc ne sont pas visible sur netlify
 2. pourquoi ma boucle pour form et size ne marche pas
 3. recalculer pour la nav
+4. Pourquoi il y a une réaction chelou avec le picto de la flèche (back-btn)
