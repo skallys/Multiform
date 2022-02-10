@@ -1,7 +1,6 @@
 2. Comment je peux déjà prendre de l'avance pour l'interface de la web app ?
 3. Comment améliorer l'interface de la section 4 (aka le call back pour l'éditeur)
 
-
 // RESTE A FAIRE
 - introduire les svg (picto + création typographique)
 - faire la vidéo
@@ -12,8 +11,6 @@
 
 
 //Mettre dès le début les clubs qui nous utilise déjà
-
-
 
 // RESTE À FAIRE 08-02-2022 :
 - Modélisation 3D de la borne
@@ -46,4 +43,3 @@ TEXTE
 5. comment stylisé l'interieur du select (les options)
 
 //CORRIGER 
-la nav utiliser un observer
