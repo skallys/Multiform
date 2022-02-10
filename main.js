@@ -6,6 +6,8 @@ import "./styles/common.css";
 const sameBut = document.querySelector('.samebutd');
 const diff = document.querySelector('.sbdifferent');
 const nav = document.querySelector('nav');
+const accr1 = document.querySelector('#accroche1');
+const accr2 = document.querySelector('#accroche2');
 
 window.addEventListener('scroll', function(){ 
     const scrolled = window.pageYOffset;
@@ -47,3 +49,4 @@ console.log(grille.style.left.value)
 //    pict.style.fill = 'var(--white)'
 //    pict.style.stroke = 'var(--black)'
 //})
+
