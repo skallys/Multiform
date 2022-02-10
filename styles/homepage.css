@@ -116,13 +116,14 @@ nav h2 {
   position: relative;
   height: 900px;
 }
-*/ #filtre10 {
+/* #filtre10 {
   background-color: yellow;
   opacity: 0.2;
   width: var(--fil1);
   left: var(--fil2);
-}
-*/ #ligne10 {
+}*/
+
+#ligne10 {
   left: 100px;
 }
 
@@ -312,6 +313,10 @@ nav h2 {
   align-items: flex-end;
 }
 
+.interligne {
+  line-height: 67px;
+}
+
 #details2 {
   grid-column-start: 3;
   grid-column-end: 5;
@@ -364,6 +369,7 @@ nav h2 {
   grid-row-end: 2;
   display: flex;
   align-items: flex-end;
+  margin-top: 42px;
 }
 
 #details1 {

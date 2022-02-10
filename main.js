@@ -28,6 +28,8 @@ window.addEventListener('scroll', function(){
     } else {
         nav.style.color = 'var(--black)'
     }
+
+    console.log(val)
     //console.log(val)
 });
 
