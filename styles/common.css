@@ -1,4 +1,4 @@
-/*IMPORTS DES FONTS*/
+/*IMPORTS DE TOUTES LES FONTS*/
 /* IMPORT font du logo (ABCWhyte-super) */
 @font-face {
   font-family: "logo";
@@ -48,6 +48,7 @@ body {
   margin: 0;
 }
 
+/* Globalement nos styles de paragraphes */
 h6 {
   font-family: "logo";
   font-size: 2rem;
@@ -89,29 +90,4 @@ h5 {
   font-family: "favorit";
   font-weight: 400;
   margin: 0;
-}
-
-/*  SAVOIR PLUS BOUTON */
-
-.savoir-plus {
-  align-self: end;
-  text-decoration: none;
-  color: var(--white);
-}
-
-.savoir-plus-shape {
-  background-color: var(--black);
-  border-radius: 40px;
-  width: 240px;
-  display: flex;
-  justify-content: center;
-  height: 50px;
-}
-
-.savoir-plus-shape h3 {
-  margin: 10px;
-}
-
-.savoir-plus-shape:hover {
-  scale: 102%;
 }
