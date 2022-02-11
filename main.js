@@ -6,12 +6,13 @@ const sameBut = document.querySelector('.samebutd');
 const diff = document.querySelector('.sbdifferent');
 const nav = document.querySelector('nav');
 
+
 window.addEventListener('scroll', function(){ 
     const scrolled = window.pageYOffset;
     const val = (scrolled * 0.5) + 68.85;
     const alv = (scrolled * 0.5)
     diff.style.transform = 'scale(' + (1.45 * val) + '%) translateY(-' + (0.1 * alv) + '%)'
-
+// animation du same but different
     const lav = (scrolled * 0.01) + 1;
     sameBut.style.transform = 'scale(' +  (99.85 / lav)  + '%)'
     if(lav > 3.6) {
@@ -19,7 +20,7 @@ window.addEventListener('scroll', function(){
     } else {
         sameBut.classList.remove('activate')
     }
-
+// changement de couleur de la nav
     if(val > 1070 && val < 1521){
         nav.style.color = 'var(--white)';
     } else if(val > 1821 && val < 2272){ 
@@ -29,9 +30,6 @@ window.addEventListener('scroll', function(){
     } else {
         nav.style.color = 'var(--black)'
     }
-
-    console.log(val)
-    //console.log(val)
 });
 
 
