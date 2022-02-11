@@ -31,20 +31,3 @@ window.addEventListener('scroll', function(){
         nav.style.color = 'var(--black)'
     }
 });
-
-
-
-
-
-
-
-
-//if(val > 1813 && val < 2259) { nav.style.color = 'var(--white)' }
-
-//pictoL.forEach(function(picto){picto.style.fill = 'var(--black)'})
-
-// pictoF.forEach(function(pict){
-//    pict.style.fill = 'var(--white)'
-//    pict.style.stroke = 'var(--black)'
-//})
-
