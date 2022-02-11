@@ -314,3 +314,7 @@ appearance: none;
 .fema.active .selectF {
   opacity: 1;
 }
+
+.xxl.active .selectS {
+  opacity: 1;
+}

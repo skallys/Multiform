@@ -110,13 +110,13 @@ const selectOption =  function(elementsToCheck) {
 }
 
 genderOptions.forEach(option => {
-  option.addEventListener("click", selectOption.bind(genderOptions))
+  option.addEventListener("click", selectOption.bind(option, genderOptions))
 })
 
 
-// sizeOptions.forEach(option => {
-//   option.addEventListener("click", selectOption(sizeOptions))
-// })
+sizeOptions.forEach(option => {
+  option.addEventListener("click", selectOption.bind(option, sizeOptions))
+})
 
 
 
