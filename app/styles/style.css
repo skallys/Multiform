@@ -71,6 +71,7 @@ body {
   width: 40px;
   margin-left: 10px;
   margin-right: 10px;
+  cursor: pointer;
 }
 
 /* 
@@ -112,6 +113,38 @@ appearance: none;
   opacity: 0.1;
 }
 
+/* FORME */
+.fema {
+  width: 45px;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 25px;
+  margin-top: 10px;
+}
+
+.active {
+  opacity: 1;
+}
+
+.fema p {
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+
+.fema:hover .selectF {
+  opacity: 1;
+}
+
+.fema:hover .cadre {
+  transform: translateY(10px);
+  opacity: 0;
+}
+
+.fema.active .selectF {
+  opacity: 1;
+}
+
+/* SELECTIONNER FORM */
 .selectF {
   height: 10px;
   width: 100%;
@@ -119,24 +152,59 @@ appearance: none;
   opacity: 0.1;
 }
 
-.radioF {
+.selectActiveF {
+  opacity: 1;
+}
+
+.cadre {
+  background-color: var(--black);
+  height: 10px;
+  width: 100%;
+  opacity: 0.1;
+  transition: 0.3s;
+}
+
+/* SIZE */
+#size {
+  margin-top: 55px;
+}
+
+.xxl {
   width: 45px;
-  margin-right: 20px;
   text-align: center;
   cursor: pointer;
+  margin-right: 25px;
+  margin-top: 10px;
 }
 
-.radio__input {
-  display: none;
-}
-
-.radio__label {
+.xxl p {
   font-weight: 400;
   font-size: 1.1rem;
-  cursor: pointer;
 }
 
-/* FORME */
+.xxl:hover .selectS {
+  opacity: 1;
+}
+
+.xxl:hover .cadre {
+  transform: translateY(10px);
+  opacity: 0;
+}
+/* SELECTIONNER SIZE */
+.selectS {
+  background-color: var(--black);
+  height: 10px;
+  width: 100%;
+  opacity: 0.1;
+}
+
+.selectActiveS {
+  opacity: 1;
+}
+
+.xxl.active .selectS {
+  opacity: 1;
+}
 
 /* la class .app-control permet d'avoir une version "inactive" aka fermée de la fonctionnalité */
 .app-control {
@@ -164,34 +232,6 @@ appearance: none;
   scale: 102%;
 }
 
-/* add panier btn */
-#addpanier {
-  width: 55px;
-  position: absolute;
-  bottom: 0.6rem;
-  right: 1rem;
-}
-
-#addpanier:hover {
-  scale: 102%;
-}
-
-/* commander btn */
-#buy {
-  background-color: var(--black);
-  border-radius: 30px;
-  color: var(--white);
-  padding: 1rem;
-  position: absolute;
-  bottom: 1rem;
-  right: 1rem;
-}
-
-#buy:hover {
-  scale: 102%;
-}
-
-/**/
 .app-control .control-target:not(.no-hide) {
   display: none;
   opacity: 0;
@@ -216,6 +256,8 @@ appearance: none;
   position: absolute;
 }
 
+/**/
+
 #p5-container > canvas {
   transition: opacity 0.2s ease-in-out;
 }
@@ -232,100 +274,14 @@ appearance: none;
   float: right;
 }
 
-.fema {
-  width: 45px;
-  text-align: center;
-  cursor: pointer;
-  margin-right: 25px;
-  margin-top: 10px;
+/* add panier btn */
+#addpanier {
+  width: 55px;
+  position: absolute;
+  bottom: 0.6rem;
+  right: 1rem;
 }
 
-.active {
-  opacity: 1;
-}
-
-.fema p {
-  font-weight: 400;
-  font-size: 1.1rem;
-}
-
-#size {
-  margin-top: 55px;
-}
-
-.xxl {
-  width: 45px;
-  text-align: center;
-  cursor: pointer;
-  margin-right: 25px;
-  margin-top: 10px;
-}
-
-.xxl p {
-  font-weight: 400;
-  font-size: 1.1rem;
-}
-
-.selectS {
-  background-color: var(--black);
-  height: 10px;
-  width: 100%;
-  opacity: 0.1;
-}
-
-.selectF {
-  background-color: var(--black);
-  height: 10px;
-  width: 100%;
-  opacity: 0.1;
-}
-
-.fema:hover .selectF {
-  opacity: 1;
-}
-
-.xxl:hover .selectS {
-  opacity: 1;
-}
-
-.fema:hover .selectF {
-  opacity: 1;
-}
-
-.xxl:hover .selectS {
-  opacity: 1;
-}
-
-.selectActiveF {
-  opacity: 1;
-}
-
-.selectActiveS {
-  opacity: 1;
-}
-
-.cadre {
-  background-color: var(--black);
-  height: 10px;
-  width: 100%;
-  opacity: 0.1;
-  transition: 0.3s;
-}
-
-.fema:hover .cadre {
-  transform: translateY(10px);
-  opacity: 0;
-}
-
-.xxl:hover .cadre {
-  transform: translateY(10px);
-  opacity: 0;
-}
-
-.fema.active .selectF {
-  opacity: 1;
-}
-
-.xxl.active .selectS {
-  opacity: 1;
+#addpanier:hover {
+  scale: 102%;
 }
