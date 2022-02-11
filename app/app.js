@@ -76,20 +76,20 @@ const sizeBtn = document.querySelectorAll(".xxl");
 
 formBtn.forEach(fBtn => {
   fBtn.addEventListener("click", function(){
-    if (fBtn.classList.contains("femaActive")){
-      fBtn.classList.remove("femaActive")
+    if (fBtn.classList.contains("selectActive")){
+      fBtn.classList.remove("selectActive")
     } else {
-      fBtn.classList.add("femaActive")
+      fBtn.classList.add("selectActive")
     }
   })
 })
 
 sizeBtn.forEach(sBtn => {
   sBtn.addEventListener("click", function(){
-    if(sBtn.classList.containes("xxlActive")){
-      sBtn.classList.remove("xxlActive")
+    if(sBtn.classList.containes("selectActive")){
+      sBtn.classList.remove("selectActive")
     } else {
-      fBtn.classList.add("xxlActive")
+      fBtn.classList.add("selectActive")
     }
   })
 })
