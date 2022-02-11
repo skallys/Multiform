@@ -1,5 +1,4 @@
-// import "./styles/homepage.css";
-// import "./styles/common.css";
+// ANIMATIONS DES ACCROCHES
 
 const ratio = .1
 const options = {
