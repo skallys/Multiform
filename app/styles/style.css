@@ -214,7 +214,6 @@ appearance: none;
   width: 50px;
   overflow: hidden;
   position: absolute;
-  transition: width 0.2s ease-in-out, height 0.2s ease-in-out;
 }
 
 .app-control.active {
@@ -225,6 +224,7 @@ appearance: none;
 
 .app-control.picto {
   background-image: url("../../assets/img/rouage.svg");
+
   border: none;
 }
 

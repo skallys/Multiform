@@ -7,6 +7,7 @@ export let sketches = [];
 let currentSketch;
 export let currentSketchControls = [];
 
+// nombre et incrustation des sliders de paramétrage
 export const createControl = (e, labels, options) => {
   const controls = document.getElementById("p5-controls");
   let container = document.createElement("div");

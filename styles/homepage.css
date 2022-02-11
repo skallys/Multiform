@@ -371,7 +371,8 @@ nav h2 {
 
 #visual {
   background-image: url("../assets/img/img-section1-4.jpg");
-  background-size: cover;
+  background-size: 150%;
+  background-position: center;
   width: 450px;
   height: 450px;
   grid-column-start: 2;
