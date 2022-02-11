@@ -26,7 +26,21 @@
       </div>
       <!-- choisir les différents design -->
       <div id="sketch">
-        <select name="" id="sketch-select" class="control-target"></select>
+        <div id="sketch-select">
+          <img
+            src="../assets/img/F_g2.svg"
+            alt="gauche"
+            id="fgauche"
+            class="flecheSketch"
+          />
+          <p id="sketchName"></p>
+          <img
+            src="../assets/img/F_d2.svg"
+            alt="gauche"
+            id="fdroite"
+            class="flecheSketch"
+          />
+        </div>
       </div>
       <!-- détails avant commande -->
       <div id="jerseySize">
@@ -34,12 +48,14 @@
           <h1>FORM</h1>
           <div id="fm" class="editI">
             <div class="fema">
+              <div class="cadre"></div>
               <p>Fem</p>
-              <div class="select"></div>
+              <div class="selectF"></div>
             </div>
             <div class="fema">
+              <div class="cadre"></div>
               <p>Masc</p>
-              <div class="select"></div>
+              <div class="selectF"></div>
             </div>
           </div>
         </div>
@@ -47,28 +63,34 @@
           <h1>SIZE</h1>
           <div id="xxxl" class="editI">
             <div class="xxl">
+              <div class="cadre"></div>
               <p>XS</p>
-              <div class="select"></div>
+              <div class="selectS"></div>
             </div>
             <div class="xxl">
+              <div class="cadre"></div>
               <p>S</p>
-              <div class="select"></div>
+              <div class="selectS"></div>
             </div>
             <div class="xxl">
+              <div class="cadre"></div>
               <p>M</p>
-              <div class="select"></div>
+              <div class="selectS"></div>
             </div>
             <div class="xxl">
+              <div class="cadre"></div>
               <p>L</p>
-              <div class="select"></div>
+              <div class="selectS"></div>
             </div>
             <div class="xxl">
+              <div class="cadre"></div>
               <p>XL</p>
-              <div class="select"></div>
+              <div class="selectS"></div>
             </div>
             <div class="xxl">
+              <div class="cadre"></div>
               <p>XXL</p>
-              <div class="select"></div>
+              <div class="selectS"></div>
             </div>
           </div>
         </div>
@@ -110,3 +132,30 @@
     <script type="module" src="./app.js"></script>
   </body>
 </html>
+
+<!--<div class="editI">
+            <div class="radioF">
+              <div class="cadre"></div>
+              <input
+                type="radio"
+                class="radio__input fema"
+                value="Fem"
+                name="fema"
+                id="fema1"
+              />
+              <label for="fema" class="radio__label">Fem</label>
+              <div class="selectF" for="fema"></div>
+            </div>
+            <div class="radioF">
+              <div class="cadre"></div>
+              <input
+                type="radio"
+                class="radio__input"
+                value="Masc"
+                name="fema"
+                id="fema2"
+              />
+              <label for="fema" class="radio__label">Masc</label>
+              <div class="selectF" for="fema"></div>
+            </div>
+          </div> -->

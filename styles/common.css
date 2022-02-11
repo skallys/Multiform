@@ -34,6 +34,7 @@
   --fil1: calc(var(--gr2) - 120px);
   --fil2: calc(var(--gr2) - var(--fil1));
   --fil3: calc(var(--gr2) - 100px);
+  --form: "n'oubliez pas d'inscrire votre e-mail";
 }
 /*COMMENT UTILISER LES VARIABLES*/
 /*

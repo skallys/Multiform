@@ -32,8 +32,8 @@ export const createControl = (e, labels, options) => {
 // Sketch switching mechanism
 export const switchSketch = (n) => {
   console.log(sketches);
-
   if (currentSketch) {
+
     if (currentSketchControls.length > 0) {
       currentSketchControls.forEach((e) => {
         e.remove();
@@ -43,6 +43,8 @@ export const switchSketch = (n) => {
     currentSketch.remove();
   }
   currentSketch = new p5(sketches[n].sketch, "p5-container");
+  document.querySelector("#sketchName").innerHTML = sketches[n].name;
+
   // Return active sketch object
   return sketches[n];
 };

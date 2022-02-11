@@ -23,8 +23,8 @@ body {
   position: fixed;
   width: 50px;
   height: 50px;
-  top: 30px;
-  left: 30px;
+  top: 1rem;
+  left: 15px;
 }
 
 #back-btn:hover {
@@ -48,32 +48,18 @@ body {
   height: 100vh;
 }
 
-select,
-input {
-  width: 80%;
-  height: 20px;
-  margin-left: 8%;
-  font-family: "favorit";
-  border-radius: 30px;
-  border-style: none;
+#sketch-select {
   height: 40px;
-  margin-top: 20px;
-  background-color: var(--grey);
+  width: 91.5%;
+  display: flex;
+  flex-direction: row;
+  background-color: var(--black);
+  color: var(--white);
+  border-radius: 50px;
 }
 
-select {
-  outline: none;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
-  display: flex;
-  padding-left: 10px;
-  color: var(--white);
-  background-color: black;
-  background-image: url("../../assets/img/F_d2.svg");
-  background-size: auto 100%;
-  background-repeat: no-repeat;
-  background-position: right 10px center;
+.flecheSketch {
+  width: 40px;
 }
 
 /* 
@@ -91,14 +77,13 @@ appearance: none;
   flex-direction: column;
   justify-content: space-around;
   margin-left: 20px;
-  margin-top: 90px;
-  margin-left: 8%;
+  margin-top: 70px;
+  margin-left: 1rem;
 }
 
 .editL {
   display: flex;
   flex-direction: column;
-  /*height: 35%;*/
 }
 .editL h1 {
   font-size: 2.3rem;
@@ -107,89 +92,40 @@ appearance: none;
 .editI {
   display: flex;
   flex-direction: row;
-  width: 80%;
+}
+
+.cadre {
+  height: 10px;
+  width: 100%;
+  background-color: var(--black);
+  opacity: 0.1;
+}
+
+.selectF {
+  height: 10px;
+  width: 100%;
+  background-color: var(--black);
+  opacity: 0.1;
+}
+
+.radioF {
+  width: 45px;
+  margin-right: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.radio__input {
+  display: none;
+}
+
+.radio__label {
+  font-weight: 400;
+  font-size: 1.1rem;
+  cursor: pointer;
 }
 
 /* FORME */
-
-.fema {
-  width: 45px;
-  text-align: center;
-  /*width: 60px;
-  height: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
-  border: solid var(--black) 0.5px;*/
-  cursor: pointer;
-  margin-right: 25px;
-  margin-top: 10px;
-}
-
-.fema p {
-  font-weight: 400;
-  font-size: 1.1rem;
-}
-/*
-.femaActive {
-  background-color: var(--grey);
-  color: var(--white);
-}*/
-
-/* SIZE */
-/*#xxxl {
-  justify-content: space-between;
-}*/
-
-#size {
-  margin-top: 55px;
-}
-
-.xxl {
-  width: 45px;
-  /*
-  height: 45px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
-  border: solid var(--black) 0.5px;*/
-  text-align: center;
-  cursor: pointer;
-  margin-right: 25px;
-  margin-top: 10px;
-}
-
-.xxl p {
-  font-weight: 400;
-  font-size: 1.1rem;
-}
-
-/*
-.xxlActive {
-  background-color: var(--grey);
-  color: var(--white);
-}*/
-
-.select {
-  background-color: var(--black);
-  height: 10px;
-  width: 100%;
-  opacity: 0;
-}
-
-.fema:hover .select {
-  opacity: 1;
-}
-
-.xxl:hover .select {
-  opacity: 1;
-}
-
-.selectActive {
-  opacity: 1;
-}
 
 /* la class .app-control permet d'avoir une version "inactive" aka fermée de la fonctionnalité */
 .app-control {
@@ -219,10 +155,10 @@ appearance: none;
 
 /* add panier btn */
 #addpanier {
-  width: 80px;
+  width: 55px;
   position: absolute;
   bottom: 0.6rem;
-  right: 2rem;
+  right: 1rem;
 }
 
 #addpanier:hover {
@@ -283,4 +219,98 @@ appearance: none;
 
 .option label span {
   float: right;
+}
+
+.fema {
+  width: 45px;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 25px;
+  margin-top: 10px;
+}
+
+.active {
+  opacity: 1;
+}
+
+.fema p {
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+
+#size {
+  margin-top: 55px;
+}
+
+.xxl {
+  width: 45px;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 25px;
+  margin-top: 10px;
+}
+
+.xxl p {
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+
+.selectS {
+  background-color: var(--black);
+  height: 10px;
+  width: 100%;
+  opacity: 0.1;
+}
+
+.selectF {
+  background-color: var(--black);
+  height: 10px;
+  width: 100%;
+  opacity: 0.1;
+}
+
+.fema:hover .selectF {
+  opacity: 1;
+}
+
+.xxl:hover .selectS {
+  opacity: 1;
+}
+
+.fema:hover .selectF {
+  opacity: 1;
+}
+
+.xxl:hover .selectS {
+  opacity: 1;
+}
+
+.selectActiveF {
+  opacity: 1;
+}
+
+.selectActiveS {
+  opacity: 1;
+}
+
+.cadre {
+  background-color: var(--black);
+  height: 10px;
+  width: 100%;
+  opacity: 0.1;
+  transition: 0.3s;
+}
+
+.fema:hover .cadre {
+  transform: translateY(10px);
+  opacity: 0;
+}
+
+.xxl:hover .cadre {
+  transform: translateY(10px);
+  opacity: 0;
+}
+
+.fema.active .selectF {
+  opacity: 1;
 }

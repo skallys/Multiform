@@ -130,7 +130,7 @@
             attentif à nos dernières actualités. MULTIFORM se déplace<br />pour
             vous et par vous sur tous vos évènements sportifs favoris.
           </p>
-          <ul>
+          <!-- <ul>
             <li>
               12 février 2022 : Tournois multidisciplinaire : Jeux d'équipes
               avec balons
@@ -145,7 +145,7 @@
               cosplayer League of Legend
             </li>
             <li>12 juin 2022 : Tournois de Beat saber</li>
-          </ul>
+          </ul> -->
         </div>
       </div>
     </section>
@@ -195,6 +195,7 @@
       </div>
       <div id="newsletter">
         <form action="">
+          <div class="cadre"></div>
           <div class="container">
             <h3 class="form1">S'inscrire à notre Newsletter</h3>
           </div>
@@ -206,6 +207,7 @@
                 placeholder="votre adresse e-mail"
                 name="mail"
                 required
+                oninvalid="this.setCustomValidity('TON ADRESSE E-MAIL')"
               />
             </label>
             <label>
@@ -216,6 +218,7 @@
           <div class="container2">
             <input type="submit" value="s'inscrire" />
           </div>
+          <div class="cadre"></div>
         </form>
       </div>
     </footer>
