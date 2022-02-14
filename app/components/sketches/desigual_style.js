@@ -4,18 +4,26 @@ const desigualStyle = {
   name: "Desigual Style",
   sketch: (sketch) => {
     let clr = 0;
+    let rectangles = [];
     //namespacing
-    const rectangles = function(){
-        for(let i = 0; i < 100; i++){
-            let r = sketch.random(100);
-            let x = sketch.random(600);
-            let y = sketch.random(400);
-            sketch.rect(x, y, i, r);
-            sketch.noFill();
-            sketch.stroke(clr, 255, 0);
-        }
-        setupResetControl();
-        setupStrokeControl();
+
+    class Rectangle {
+      constructor() {
+        this.x = sketch.random(sketch.width);
+        this.y = sketch.random(sketch.height);
+        this.w = sketch.random(100);
+        this.h = sketch.random(100);
+        this.c = [255, 0, 0];
+      }
+
+      draw() {
+        sketch.noFill();
+        sketch.stroke(this.c[0], this.c[1], this.c[2]);
+        sketch.rect(this.x, this.y, this.w, this.h);
+      }
+      changeColor(r, g, b) {
+        this.c = [r, g, b];
+      }
     }
 
     sketch.setup = () => {
@@ -25,46 +33,60 @@ const desigualStyle = {
       //Création d'une id et d'une classe pour plus tard
       cnv.id("drawing-canvas");
       cnv.class("control-target");
-      sketch.background(255,255,0);
-      rectangles();
+      sketch.background(255, 255, 0);
+      setupResetControl();
+      setupStrokeControl();
+      for (let i = 0; i < 100; i++) {
+        let r = new Rectangle();
+        rectangles.push(r);
+      }
     };
 
     sketch.draw = () => {
+      for (let r of rectangles) {
+        r.draw();
+      }
     };
 
     const resetSketch = () => {
-        sketch.background(0, 0, 255, 255);
-        sketch.setup();
+      sketch.background(255, 255, 0);
+      rectangles = [];
+      for (let i = 0; i < 100; i++) {
+        let r = new Rectangle();
+        rectangles.push(r);
       }
+    };
 
-      //le bouton reset se multiplie ?
     const setupResetControl = () => {
-        let element = document.createElement("a");
-        createControl(element, false, {
-          class: "resetBtn"
-        });
-        element.innerHTML = "Reset";
-        element.addEventListener("click", () => {
-          resetSketch();
-        });
-      };
+      let element = document.createElement("a");
+      createControl(element, false, {
+        class: "resetBtn",
+      });
+      element.innerHTML = "Reset";
+      element.addEventListener("click", () => {
+        resetSketch();
+      });
+    };
+    //color
+    const setupStrokeControl = () => {
+      let element = document.createElement("input");
+      let control = createControl(element, true, {
+        name: "color",
+        type: "range",
+        min: 0,
+        max: 255,
+        step: 1,
+        value: clr,
+      });
 
-      const setupStrokeControl = () => {
-        let element = document.createElement("input");
-        let control = createControl(element, true, {
-          name: "color",
-          type: "range",
-          min: 0,
-          max: 255,
-          step: 1,
-          value: clr
-        });
-  
-        element.addEventListener("input", () => {
-          control.innerHTML = element.value;
-          clr = parseInt(element.value, 10);
-        });
-      };
-  }
+      element.addEventListener("input", () => {
+        control.innerHTML = element.value;
+        for (let r of rectangles) {
+          r.changeColor(parseInt(element.value, 10), 0, 0);
+        }
+        // clr = parseInt(element.value, 10);
+      });
+    };
+  },
 };
 sketches.push(desigualStyle);

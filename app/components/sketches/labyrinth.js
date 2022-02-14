@@ -35,8 +35,6 @@ const labyrinth = {
           y = y + spacing
       }
       if (y + spacing > sketch.height) {
-        sketch.background(0);
-        y = 0;
       }
     };
 
@@ -57,7 +55,14 @@ const labyrinth = {
         element.addEventListener("input", () => {
           control.innerHTML = element.value;
           spacing = parseInt(element.value, 10);
+          resetSketch()
         });
+      };
+
+      const resetSketch = () => {
+        sketch.background(0);
+        x = 0;
+        y = 0;
       };
 
 

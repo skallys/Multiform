@@ -53,5 +53,5 @@ The coding train
 14/02/2022
 
 1. controle du reset/ vitesse de labyrinth
-2. pourquoi le bouton reset se multiplie dans desigual Style 
+2. pourquoi le bouton reset se multiplie dans desigual Style et comment faire pour la couleur.
 
