@@ -263,7 +263,8 @@ appearance: none;
 }
 
 #p5-controls {
-  padding: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   width: 91%;
 }
 
@@ -281,11 +282,11 @@ appearance: none;
   width: 100%;
 }
 
-.option input[name="Spacing"] {
+input[type="range"] {
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 /* INPUT SLIDER */
