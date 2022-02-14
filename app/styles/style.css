@@ -41,6 +41,174 @@ body {
   right: 34.2%;
 }
 
+/* la class .app-control permet d'avoir une version "inactive" aka fermée de la fonctionnalité */
+.app-control {
+  background: #ffffff;
+  border: 2px solid #000000;
+  height: 50px;
+  width: 50px;
+  overflow: hidden;
+  position: absolute;
+}
+
+.app-control.active {
+  height: 400px;
+  width: 40vw;
+  background-image: none;
+}
+
+.app-control.picto {
+  background-image: url("../../assets/img/rouage.svg");
+
+  border: none;
+}
+
+.app-control.picto:hover {
+  scale: 102%;
+}
+
+.app-control .control-target:not(.no-hide) {
+  display: none;
+  opacity: 0;
+}
+
+.app-control.active .control-target:not(.no-hide) {
+  display: block;
+  opacity: 1;
+}
+
+.app-control .toggle img {
+  display: none;
+  padding: 0.25rem;
+}
+
+.app-control.active .toggle img {
+  display: block;
+}
+
+.app-control #p5-container {
+  overflow: hidden;
+  position: absolute;
+}
+
+/* FENÊTRE DE CONTROL */
+#p5-container > canvas {
+  transition: opacity 0.2s ease-in-out;
+}
+
+#p5-controls {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  width: 91%;
+}
+
+#p5-controls > * {
+  margin-bottom: 2rem;
+}
+
+.option label span {
+  float: right;
+}
+
+.option {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+input[type="range"] {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  margin-top: 20px;
+}
+
+/* INPUT SLIDER */
+/* thumb */
+input[type="range"]::-moz-range-thumb {
+  -webkit-appearance: none;
+  border: 1px solid var(--black);
+  height: 25px;
+  width: 25px;
+  border-radius: 0px;
+  background: var(--black);
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 1px solid var(--black);
+  height: 25px;
+  width: 25px;
+  border-radius: 0px;
+  background: var(--black);
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* track */
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 9px;
+  box-shadow: 1px 1px 1px var(--black), 0px 0px 1px var(--black);
+  background: var(--white);
+  border-radius: 0px;
+  border: 0.2px solid var(--black);
+}
+
+input[type="range"]::-moz-range-track {
+  height: 9px;
+  box-shadow: 1px 1px 1px var(--black), 0px 0px 1px var(--black);
+  background: var(--white);
+  border-radius: 0px;
+  border: 0.2px solid var(--black);
+}
+
+/* INPUT COLOR */
+
+input [type="color"] {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  margin-top: 10px;
+}
+
+input[type="color"]::-webkit-color-swatch {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 0px;
+  border: 1px solid var(--pink);
+  background-color: var(--white);
+  height: 40px;
+  width: 40px;
+  padding: 0;
+}
+
+input[type="color"]::-moz-color-swatch {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 0px;
+  border: 1px solid var(--pink);
+  background-color: var(--white);
+  height: 40px;
+  width: 40px;
+  padding: 0;
+}
+
+/* BOUTON RESET */
+.resetBtn {
+  font-family: "favorit";
+  font-size: 1rem;
+  color: var(--white);
+  background-color: var(--black);
+  padding: 10px;
+  border-radius: 20px;
+  width: 3rem;
+  text-align: center;
+}
+
 /* DROITE */
 
 #droite {
@@ -204,162 +372,6 @@ appearance: none;
 
 .xxl.active .selectS {
   opacity: 1;
-}
-
-/* la class .app-control permet d'avoir une version "inactive" aka fermée de la fonctionnalité */
-.app-control {
-  background: #ffffff;
-  border: 2px solid #000000;
-  height: 50px;
-  width: 50px;
-  overflow: hidden;
-  position: absolute;
-}
-
-.app-control.active {
-  height: 400px;
-  width: 40vw;
-  background-image: none;
-}
-
-.app-control.picto {
-  background-image: url("../../assets/img/rouage.svg");
-
-  border: none;
-}
-
-.app-control.picto:hover {
-  scale: 102%;
-}
-
-.app-control .control-target:not(.no-hide) {
-  display: none;
-  opacity: 0;
-}
-
-.app-control.active .control-target:not(.no-hide) {
-  display: block;
-  opacity: 1;
-}
-
-.app-control .toggle img {
-  display: none;
-  padding: 0.25rem;
-}
-
-.app-control.active .toggle img {
-  display: block;
-}
-
-.app-control #p5-container {
-  overflow: hidden;
-  position: absolute;
-}
-
-/* FENÊTRE DE CONTROL */
-#p5-container > canvas {
-  transition: opacity 0.2s ease-in-out;
-}
-
-#p5-controls {
-  padding-left: 2rem;
-  padding-right: 2rem;
-  width: 91%;
-}
-
-#p5-controls > * {
-  margin-bottom: 2rem;
-}
-
-.option label span {
-  float: right;
-}
-
-.option {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-input[type="range"] {
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
-  margin-top: 20px;
-}
-
-/* INPUT SLIDER */
-/* thumb */
-input[type="range"]::-moz-range-thumb {
-  -webkit-appearance: none;
-  border: 1px solid var(--black);
-  height: 25px;
-  width: 25px;
-  border-radius: 0px;
-  background: var(--black);
-  cursor: pointer;
-  margin-top: 10px;
-}
-
-input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  border: 1px solid var(--black);
-  height: 25px;
-  width: 25px;
-  border-radius: 0px;
-  background: var(--black);
-  cursor: pointer;
-  margin-top: 10px;
-}
-
-/* track */
-input[type="range"]::-webkit-slider-runnable-track {
-  height: 9px;
-  box-shadow: 1px 1px 1px var(--black), 0px 0px 1px var(--black);
-  background: var(--white);
-  border-radius: 0px;
-  border: 0.2px solid var(--black);
-}
-
-input[type="range"]::-moz-range-track {
-  height: 9px;
-  box-shadow: 1px 1px 1px var(--black), 0px 0px 1px var(--black);
-  background: var(--white);
-  border-radius: 0px;
-  border: 0.2px solid var(--black);
-}
-
-/* INPUT COLOR */
-
-input [type="color"] {
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
-  margin-top: 10px;
-}
-
-input[type="color"]::-webkit-color-swatch {
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
-  border-radius: 0px;
-  border: 1px solid var(--pink);
-  background-color: var(--white);
-  height: 40px;
-  width: 40px;
-  padding: 0;
-}
-
-input[type="color"]::-moz-color-swatch {
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
-  border-radius: 0px;
-  border: 1px solid var(--pink);
-  background-color: var(--white);
-  height: 40px;
-  width: 40px;
-  padding: 0;
 }
 
 /* add panier btn */

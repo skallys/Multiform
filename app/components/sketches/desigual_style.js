@@ -13,6 +13,7 @@ const desigualStyle = {
             sketch.noFill();
             sketch.stroke(1);
         }
+        setupResetControl();
     }
 
     sketch.setup = () => {
@@ -29,6 +30,22 @@ const desigualStyle = {
     sketch.draw = () => {
     };
 
+    const resetSketch = () => {
+        sketch.background(0, 0, 255, 255);
+        sketch.setup();
+      }
+
+      //le bouton reset se multiplie ?
+    const setupResetControl = () => {
+        let element = document.createElement("a");
+        createControl(element, false, {
+          class: "resetBtn"
+        });
+        element.innerHTML = "Reset";
+        element.addEventListener("click", () => {
+          resetSketch();
+        });
+      };
   }
 };
 sketches.push(desigualStyle);
