@@ -1,15 +1,9 @@
 import "./styles/style.css";
 import "../styles/common.css";
 
-
 import "./components/sketches/desigual_style";
 import "./components/sketches/labyrinth";
 import "./components/sketches/multi_line";
-import "./components/sketches/lines";
-import "./components/sketches/random_lines";
-import "./components/sketches/cat";
-import "./components/sketches/small_ellipses";
-import "./components/sketches/rectangles";
 
 import { sketches, switchSketch } from "./components/sketches";
 import { init, setCanvasTexture } from "./components/renderer";
@@ -18,7 +12,6 @@ import { waitForCanvas } from "./components/utils";
 let currentSketch;
 let currentSketchIndex = 0;
 let rendererIsLoaded = init();
-
 
 window.addEventListener("load", () => {
   waitForCanvas().then(() => {
@@ -48,22 +41,21 @@ window.addEventListener("load", () => {
 //next
 const nextSketch = () => {
   currentSketchIndex++;
-  if(currentSketchIndex >= sketches.length) {
+  if (currentSketchIndex >= sketches.length) {
     currentSketchIndex = 0;
   }
-  switchSketch(currentSketchIndex);  
+  switchSketch(currentSketchIndex);
   setCanvasTexture();
-}
+};
 //previous
 const previousSketch = () => {
   currentSketchIndex--;
-  if(currentSketchIndex < 0) {
+  if (currentSketchIndex < 0) {
     currentSketchIndex = sketches.length - 1;
-    
   }
-  switchSketch(currentSketchIndex);  
+  switchSketch(currentSketchIndex);
   setCanvasTexture();
-}
+};
 //controller
 function createSelect() {
   // Default sketch
@@ -76,20 +68,19 @@ function createSelect() {
 let genderOptions = document.querySelectorAll(".fema");
 let sizeOptions = document.querySelectorAll(".xxl");
 
-const selectOption =  function(elementsToCheck) {
-    this.classList.add("active")
-    elementsToCheck.forEach(option => {
-      if(this !== option) {
-        option.classList.remove("active")
-      }
-    })
-  
-}
+const selectOption = function (elementsToCheck) {
+  this.classList.add("active");
+  elementsToCheck.forEach((option) => {
+    if (this !== option) {
+      option.classList.remove("active");
+    }
+  });
+};
 //FORM
-genderOptions.forEach(option => {
-  option.addEventListener("click", selectOption.bind(option, genderOptions))
-})
+genderOptions.forEach((option) => {
+  option.addEventListener("click", selectOption.bind(option, genderOptions));
+});
 //SIZE
-sizeOptions.forEach(option => {
-  option.addEventListener("click", selectOption.bind(option, sizeOptions))
-})
+sizeOptions.forEach((option) => {
+  option.addEventListener("click", selectOption.bind(option, sizeOptions));
+});

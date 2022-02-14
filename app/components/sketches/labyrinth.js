@@ -19,20 +19,20 @@ const labyrinth = {
     let x = 0;
     let y = 0;
     let spacing = 30;
-    let strk = 1
+    let clr = 1;
 
     sketch.draw = () => {
-      sketch.stroke(strk, 0, 255);
-      if(sketch.random(1) < 0.5){
-          sketch.line(x,y,x + spacing,y + spacing);
+      sketch.stroke(255, clr, 0);
+      if (sketch.random(1) < 0.5) {
+        sketch.line(x, y, x + spacing, y + spacing);
       } else {
-          sketch.line(x,y + spacing,x + spacing,y);
+        sketch.line(x, y + spacing, x + spacing, y);
       }
       x = x + spacing;
 
-      if(x > sketch.width){
-          x = 0;
-          y = y + spacing
+      if (x > sketch.width) {
+        x = 0;
+        y = y + spacing;
       }
       if (y + spacing > sketch.height) {
       }
@@ -40,48 +40,47 @@ const labyrinth = {
 
     const setupQuantityControl = () => {
       // create the element
-        let element = document.createElement("input");
-        // use helper function to create control. First prameter is the control element itself.
-        let control = createControl(element, true, {
-          name: "Spacing",
-          type: "range",
-          min: 10,
-          max: 100,
-          step: 1,
-          value: spacing
-        });
-  
-        //Listen to input changes and set resdable value
-        element.addEventListener("input", () => {
-          control.innerHTML = element.value;
-          spacing = parseInt(element.value, 10);
-          resetSketch()
-        });
-      };
+      let element = document.createElement("input");
+      // use helper function to create control. First prameter is the control element itself.
+      let control = createControl(element, true, {
+        name: "Spacing",
+        type: "range",
+        min: 10,
+        max: 100,
+        step: 1,
+        value: spacing,
+      });
 
-      const resetSketch = () => {
-        sketch.background(0);
-        x = 0;
-        y = 0;
-      };
+      //Listen to input changes and set resdable value
+      element.addEventListener("input", () => {
+        control.innerHTML = element.value;
+        spacing = parseInt(element.value, 10);
+        resetSketch();
+      });
+    };
 
+    const resetSketch = () => {
+      sketch.background(0);
+      x = 0;
+      y = 0;
+    };
 
-      const setupStrokeControl = () => {
-        let element = document.createElement("input");
-        let control = createControl(element, true, {
-          name: "color",
-          type: "range",
-          min: 0,
-          max: 255,
-          step: 1,
-          value: strk
-        });
-  
-        element.addEventListener("input", () => {
-          control.innerHTML = element.value;
-          strk = parseInt(element.value, 10);
-        });
-      };
-  }
+    const setupStrokeControl = () => {
+      let element = document.createElement("input");
+      let control = createControl(element, true, {
+        name: "color",
+        type: "range",
+        min: 1,
+        max: 255,
+        step: 1,
+        value: clr,
+      });
+
+      element.addEventListener("input", () => {
+        control.innerHTML = element.value;
+        clr = parseInt(element.value, 10);
+      });
+    };
+  },
 };
 sketches.push(labyrinth);
