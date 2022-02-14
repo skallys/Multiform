@@ -49,3 +49,7 @@ TEXTE
 //image t-shirt du bas trop petite (aggrandire)
 
 The coding train
+
+14/02/2022
+
+1. Créer des contrôles pour paramétrer

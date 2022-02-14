@@ -36,7 +36,7 @@ const multiLine = {
         type: "range",
         min: 1,
         max: 5,
-        step: 0.2,
+        step: 1,
         value: lineQuantity
       });
 
