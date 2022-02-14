@@ -1,6 +1,8 @@
 import "./styles/style.css";
 import "../styles/common.css";
 
+
+import "./components/sketches/labyrinth";
 import "./components/sketches/lines";
 import "./components/sketches/random_lines";
 import "./components/sketches/cat";
