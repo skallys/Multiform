@@ -13,13 +13,15 @@ const labyrinth = {
       cnv.class("control-target");
       sketch.background(0);
       setupQuantityControl();
+      setupBeginControl();
     };
 
     let x = 0;
     let y = 0;
-    let spacing = 20;
+    let spacing = 30;
 
     sketch.draw = () => {
+      console.log(x, y)
       sketch.stroke(255);
       if(sketch.random(1) < 0.5){
           sketch.line(x,y,x + spacing,y + spacing);
@@ -27,9 +29,14 @@ const labyrinth = {
           sketch.line(x,y + spacing,x + spacing,y);
       }
       x = x + spacing;
+
       if(x > sketch.width){
           x = 0;
           y = y + spacing
+      }
+      if (y + spacing > sketch.height) {
+        sketch.background(0);
+        y = 0;
       }
     };
 
@@ -49,10 +56,16 @@ const labyrinth = {
         //Listen to input changes and set resdable value
         element.addEventListener("input", () => {
           control.innerHTML = element.value;
-          spacing = element.value;
-          resetSketch();
+          spacing = parseInt(element.value, 10);
+          //resetSketch()
         });
       };
+
+      const resetSketch = (_x, _y) => {
+        sketch.background(0);
+        x = _x;
+        y = _y;
+      }
 
       const setupBeginControl = () => {
         let element = document.createElement("input");
@@ -67,8 +80,8 @@ const labyrinth = {
   
         element.addEventListener("input", () => {
           control.innerHTML = element.value;
-          y = element.value;
-          resetSketch();
+          // y = parseInt(element.value, 10);
+          resetSketch(parseInt(element.value, 10) * x, 0);
         });
       };
   }

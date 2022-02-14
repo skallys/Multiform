@@ -15,7 +15,6 @@ const multiLine = {
     };
     sketch.draw = () => {
       sketch.background(0);
-
       sketch.stroke(255);
       for (let x = 0; x <= sketch.width; x += sketch.width / 5) {
         for (let y = 0; y <= sketch.height; y += sketch.height / 3) {
@@ -29,20 +28,22 @@ const multiLine = {
         }
       }
     };
+
+    //nbr de lignes
     const setupQuantityControl = () => {
       let element = document.createElement("input");
       let control = createControl(element, true, {
         name: "Quantity",
         type: "range",
-        min: 1,
-        max: 5,
+        min: 5,
+        max: 100,
         step: 1,
         value: lineQuantity
       });
 
       element.addEventListener("input", () => {
         control.innerHTML = element.value;
-        lineQuantity = element.value;
+        lineQuantity = parseInt(element.value, 10);
       });
     };
   }

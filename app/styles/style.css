@@ -256,7 +256,6 @@ appearance: none;
   position: absolute;
 }
 
-/**/
 /* FENÊTRE DE CONTROL */
 #p5-container > canvas {
   transition: opacity 0.2s ease-in-out;

@@ -2,13 +2,14 @@ import "./styles/style.css";
 import "../styles/common.css";
 
 
+import "./components/sketches/desigual_style";
 import "./components/sketches/labyrinth";
+import "./components/sketches/multi_line";
 import "./components/sketches/lines";
 import "./components/sketches/random_lines";
 import "./components/sketches/cat";
 import "./components/sketches/small_ellipses";
 import "./components/sketches/rectangles";
-import "./components/sketches/multi_line";
 
 import { sketches, switchSketch } from "./components/sketches";
 import { init, setCanvasTexture } from "./components/renderer";

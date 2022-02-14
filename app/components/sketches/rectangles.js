@@ -12,13 +12,9 @@ const rectangles = {
     };
     sketch.draw = () => {
       // Prevent drawing if div containing canvas is not active.
-      if (
-        document
-          .querySelector(".app-control#canvas")
-          .classList.contains("active")
-      ) {
+    
         sketch.rect(sketch.mouseX, sketch.mouseY, 100, 100);
-      }
+      
     };
   }
 };
