@@ -11,15 +11,15 @@ export const init = () => {
   const rendererElement = document.getElementById("renderer");
   renderer = new THREE.WebGLRenderer({
     antialias: true,
-    canvas: rendererElement
+    canvas: rendererElement,
+    // alpha: true,
   });
 
-  renderer.setSize(
-    rendererElement.clientWidth,
-    rendererElement.clientHeight
-  );
+  //renderer.setClearColor(0xffffff, 0);
 
-  // CAMERA 
+  renderer.setSize(rendererElement.clientWidth, rendererElement.clientHeight);
+
+  // CAMERA
   //saloua: ici pour que le jersey ne soit pas déformé: (window.innerWidth/100)*66.7) /100 + *66.7 c'est pour que celà entre bien dans la fenêtre qui fait 66.7% de la taille de la fenêtre.
   camera = new THREE.PerspectiveCamera(
     50,
@@ -32,12 +32,12 @@ export const init = () => {
 
   // SCENE
   scene = new THREE.Scene();
-  scene.background = new THREE.Color(0xffffff);
+  scene.background = new THREE.Color(0x242424);
 
   // MATERIAL
   material = new THREE.MeshStandardMaterial({
     emissive: new THREE.Color(0xffffff),
-    side: THREE.DoubleSide
+    side: THREE.DoubleSide,
   });
 
   // MODEL

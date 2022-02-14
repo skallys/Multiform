@@ -58,8 +58,9 @@ body {
 }
 
 .app-control.picto {
+  background-color: var(--black);
   background-image: url("../../assets/img/rouage.svg");
-
+  border-radius: 40px;
   border: none;
 }
 
