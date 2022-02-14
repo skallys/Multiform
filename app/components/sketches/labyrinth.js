@@ -13,16 +13,16 @@ const labyrinth = {
       cnv.class("control-target");
       sketch.background(0);
       setupQuantityControl();
-      setupBeginControl();
+      setupStrokeControl();
     };
 
     let x = 0;
     let y = 0;
     let spacing = 30;
+    let strk = 1
 
     sketch.draw = () => {
-      console.log(x, y)
-      sketch.stroke(255);
+      sketch.stroke(strk, 0, 255);
       if(sketch.random(1) < 0.5){
           sketch.line(x,y,x + spacing,y + spacing);
       } else {
@@ -67,21 +67,20 @@ const labyrinth = {
         y = _y;
       }
 
-      const setupBeginControl = () => {
+      const setupStrokeControl = () => {
         let element = document.createElement("input");
         let control = createControl(element, true, {
-          name: "Begin",
+          name: "color",
           type: "range",
           min: 0,
-          max: 100,
+          max: 255,
           step: 1,
-          value: y
+          value: strk
         });
   
         element.addEventListener("input", () => {
           control.innerHTML = element.value;
-          // y = parseInt(element.value, 10);
-          resetSketch(parseInt(element.value, 10) * x, 0);
+          strk = parseInt(element.value, 10);
         });
       };
   }
