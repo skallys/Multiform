@@ -34,7 +34,9 @@ const labyrinth = {
     };
 
     const setupQuantityControl = () => {
+      // create the element
         let element = document.createElement("input");
+        // use helper function to create control. First prameter is the control element itself.
         let control = createControl(element, true, {
           name: "Spacing",
           type: "range",
@@ -44,6 +46,7 @@ const labyrinth = {
           value: spacing
         });
   
+        //Listen to input changes and set resdable value
         element.addEventListener("input", () => {
           control.innerHTML = element.value;
           spacing = element.value;
