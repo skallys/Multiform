@@ -33,7 +33,7 @@ const desigualStyle = {
       //Création d'une id et d'une classe pour plus tard
       cnv.id("drawing-canvas");
       cnv.class("control-target");
-      sketch.background(255, 255, 0);
+      sketch.background(220);
       setupResetControl();
       setupStrokeControl();
       for (let i = 0; i < 100; i++) {
@@ -49,7 +49,7 @@ const desigualStyle = {
     };
 
     const resetSketch = () => {
-      sketch.background(255, 255, 0);
+      sketch.background(220);
       rectangles = [];
       for (let i = 0; i < 100; i++) {
         let r = new Rectangle();
@@ -71,7 +71,7 @@ const desigualStyle = {
     const setupStrokeControl = () => {
       let element = document.createElement("input");
       let control = createControl(element, true, {
-        name: "color",
+        name: "Color",
         type: "range",
         min: 0,
         max: 255,

@@ -13,7 +13,7 @@ const multiLine = {
       cnv.class("control-target");
       sketch.background(0);
       setupQuantityControl();
-      setupStrokeControl(); 
+      setupStrokeControl();
     };
     sketch.draw = () => {
       sketch.background(0);
@@ -40,7 +40,7 @@ const multiLine = {
         min: 5,
         max: 100,
         step: 1,
-        value: lineQuantity
+        value: lineQuantity,
       });
 
       element.addEventListener("input", () => {
@@ -52,12 +52,12 @@ const multiLine = {
     const setupStrokeControl = () => {
       let element = document.createElement("input");
       let control = createControl(element, true, {
-        name: "color",
+        name: "Color",
         type: "range",
         min: 0,
         max: 255,
         step: 1,
-        value: clr
+        value: clr,
       });
 
       element.addEventListener("input", () => {
@@ -65,7 +65,6 @@ const multiLine = {
         clr = parseInt(element.value, 10);
       });
     };
-
-  }
+  },
 };
 sketches.push(multiLine);

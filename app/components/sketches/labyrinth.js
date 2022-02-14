@@ -68,7 +68,7 @@ const labyrinth = {
     const setupStrokeControl = () => {
       let element = document.createElement("input");
       let control = createControl(element, true, {
-        name: "color",
+        name: "Color",
         type: "range",
         min: 1,
         max: 255,
