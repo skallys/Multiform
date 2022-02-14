@@ -288,7 +288,7 @@ appearance: none;
   margin-top: 10px;
 }
 
-/* SLIDER */
+/* INPUT SLIDER */
 /* thumb */
 input[type="range"]::-moz-range-thumb {
   -webkit-appearance: none;
@@ -298,6 +298,7 @@ input[type="range"]::-moz-range-thumb {
   border-radius: 0px;
   background: var(--black);
   cursor: pointer;
+  margin-top: 10px;
 }
 
 input[type="range"]::-webkit-slider-thumb {
@@ -308,6 +309,7 @@ input[type="range"]::-webkit-slider-thumb {
   border-radius: 0px;
   background: var(--black);
   cursor: pointer;
+  margin-top: 10px;
 }
 
 /* track */
@@ -325,6 +327,39 @@ input[type="range"]::-moz-range-track {
   background: var(--white);
   border-radius: 0px;
   border: 0.2px solid var(--pink);
+}
+
+/* INPUT COLOR */
+
+input [type="color"] {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  margin-top: 10px;
+}
+
+input[type="color"]::-webkit-color-swatch {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 0px;
+  border: 1px solid var(--pink);
+  background-color: var(--white);
+  height: 40px;
+  width: 40px;
+  padding: 0;
+}
+
+input[type="color"]::-moz-color-swatch {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 0px;
+  border: 1px solid var(--pink);
+  background-color: var(--white);
+  height: 40px;
+  width: 40px;
+  padding: 0;
 }
 
 /* add panier btn */
