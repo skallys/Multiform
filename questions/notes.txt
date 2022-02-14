@@ -52,6 +52,6 @@ The coding train
 
 14/02/2022
 
-1. Créer des contrôles pour paramétrer (labyrinth)
-2. Stylisé les input type:color
-3.
+1. controle du reset/ vitesse de labyrinth
+2. pourquoi le bouton reset se multiplie dans desigual Style 
+

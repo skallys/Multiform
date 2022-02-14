@@ -3,6 +3,7 @@ import { sketches, sketchWidth, createControl } from "../sketches";
 const desigualStyle = {
   name: "Desigual Style",
   sketch: (sketch) => {
+    let clr = 0;
     //namespacing
     const rectangles = function(){
         for(let i = 0; i < 100; i++){
@@ -11,9 +12,10 @@ const desigualStyle = {
             let y = sketch.random(400);
             sketch.rect(x, y, i, r);
             sketch.noFill();
-            sketch.stroke(1);
+            sketch.stroke(clr, 255, 0);
         }
         setupResetControl();
+        setupStrokeControl();
     }
 
     sketch.setup = () => {
@@ -44,6 +46,23 @@ const desigualStyle = {
         element.innerHTML = "Reset";
         element.addEventListener("click", () => {
           resetSketch();
+        });
+      };
+
+      const setupStrokeControl = () => {
+        let element = document.createElement("input");
+        let control = createControl(element, true, {
+          name: "color",
+          type: "range",
+          min: 0,
+          max: 255,
+          step: 1,
+          value: clr
+        });
+  
+        element.addEventListener("input", () => {
+          control.innerHTML = element.value;
+          clr = parseInt(element.value, 10);
         });
       };
   }

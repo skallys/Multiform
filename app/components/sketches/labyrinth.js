@@ -57,15 +57,9 @@ const labyrinth = {
         element.addEventListener("input", () => {
           control.innerHTML = element.value;
           spacing = parseInt(element.value, 10);
-          //resetSketch()
         });
       };
 
-      const resetSketch = (_x, _y) => {
-        sketch.background(0);
-        x = _x;
-        y = _y;
-      }
 
       const setupStrokeControl = () => {
         let element = document.createElement("input");
