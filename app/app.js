@@ -83,12 +83,6 @@ genderOptions.forEach((option) => {
   option.addEventListener("click", selectOption.bind(option, genderOptions));
 });
 
-genderOptions.forEach(function (option) {
-  option.addEventListener("click", () => {
-    option.
-  });
-});
-
 //SIZE
 sizeOptions.forEach((option) => {
   option.addEventListener("click", selectOption.bind(option, sizeOptions));
