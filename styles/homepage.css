@@ -370,15 +370,23 @@ nav h2 {
 }
 
 #visual {
-  background-image: url("../assets/img/img-section1-4.jpg");
-  background-size: 150%;
-  background-position: center;
-  width: 450px;
-  height: 450px;
+  width: 90%;
+  height: 350px;
   grid-column-start: 2;
   grid-column-end: 3;
-  align-self: center;
-  margin-top: 10vh;
+  object-fit: fit;
+  border: 10px solid var(--black);
+  border-radius: 40px;
+  margin-top: 20px;
+}
+
+.visual {
+  width: var(--gr2);
+  height: 350px;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  margin-top: 20px;
+  cursor: pointer;
 }
 
 #go-edit2 {
@@ -390,7 +398,7 @@ nav h2 {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-bottom: 5vh;
+  margin-bottom: 1vh;
 }
 
 #ligne3 {
@@ -403,6 +411,7 @@ nav h2 {
   align-self: end;
   position: relative;
   left: 25px;
+  bottom: -30px;
 }
 
 /* FOOTER */

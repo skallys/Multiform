@@ -1,7 +1,7 @@
 import { sketches, sketchWidth, createControl } from "../sketches";
 
 const londonRain = {
-  name: "London rain",
+  name: "London rain *dessine en dessus*",
   sketch: (sketch) => {
     //namespacing
 
@@ -14,7 +14,7 @@ const londonRain = {
       //Création d'une id et d'une classe pour plus tard
       cnv.id("drawing-canvas");
       cnv.class("control-target");
-      sketch.background(230);
+      sketch.background(130);
       setupSizeControl();
       setupResetControl();
     };
@@ -59,7 +59,7 @@ const londonRain = {
       });
       element.innerHTML = "Reset";
       element.addEventListener("click", () => {
-        sketch.background(230);
+        sketch.background(130);
       });
     };
   },
