@@ -82,9 +82,9 @@ const desigualStyle = {
     const setupResetControl = () => {
       let element = document.createElement("a");
       createControl(element, false, {
-        class: "resetBtn",
+        class: "randomBtn",
       });
-      element.innerHTML = "Reset";
+      element.innerHTML = "Random";
       element.addEventListener("click", () => {
         resetSketch();
       });
