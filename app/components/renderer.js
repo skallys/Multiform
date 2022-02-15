@@ -15,7 +15,7 @@ export const init = () => {
     // alpha: true,
   });
 
-  //renderer.setClearColor(0xffffff, 0);
+  renderer.setClearColor(0xffffff, 0);
 
   renderer.setSize(rendererElement.clientWidth, rendererElement.clientHeight);
 
@@ -32,7 +32,7 @@ export const init = () => {
 
   // SCENE
   scene = new THREE.Scene();
-  scene.background = new THREE.Color(0x242424);
+  //scene.background = new THREE.Color(0x242424);
 
   // MATERIAL
   material = new THREE.MeshStandardMaterial({

@@ -1,6 +1,7 @@
 import "./styles/style.css";
 import "../styles/common.css";
 
+import "./components/sketches/london_rain";
 import "./components/sketches/desigual_style";
 import "./components/sketches/labyrinth";
 import "./components/sketches/multi_line";

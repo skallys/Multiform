@@ -19,7 +19,7 @@ const labyrinth = {
     let x = 0;
     let y = 0;
     let spacing = 30;
-    let clr = 1;
+    let clr = 255;
 
     sketch.draw = () => {
       sketch.stroke(255, clr, 0);

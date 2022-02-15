@@ -51,6 +51,12 @@ TEXTE
 The coding train
 
 14/02/2022
-
 1. pourquoi le bouton reset se multiplie dans desigual Style et comment faire pour la couleur.
 
+15/02/2022
+
+1. Créer un design supplémentaire où on peut dessiner
+2. faire un screen recorder du dernier design
+3. l'implémenter à la place de la photo dans section homepage de fin 
+4. Revoir event et news.
+5. animation bouton size et form a corriger.

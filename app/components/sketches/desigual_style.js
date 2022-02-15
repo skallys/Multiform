@@ -34,8 +34,8 @@ const desigualStyle = {
       cnv.id("drawing-canvas");
       cnv.class("control-target");
       sketch.background(220);
-      setupResetControl();
       setupStrokeControl();
+      setupResetControl();
       for (let i = 0; i < 100; i++) {
         let r = new Rectangle();
         rectangles.push(r);
@@ -57,17 +57,7 @@ const desigualStyle = {
       }
     };
 
-    const setupResetControl = () => {
-      let element = document.createElement("a");
-      createControl(element, false, {
-        class: "resetBtn",
-      });
-      element.innerHTML = "Reset";
-      element.addEventListener("click", () => {
-        resetSketch();
-      });
-    };
-    //color
+    //color range
     const setupStrokeControl = () => {
       let element = document.createElement("input");
       let control = createControl(element, true, {
@@ -85,6 +75,18 @@ const desigualStyle = {
           r.changeColor(parseInt(element.value, 10), 0, 0);
         }
         // clr = parseInt(element.value, 10);
+      });
+    };
+
+    //reset button
+    const setupResetControl = () => {
+      let element = document.createElement("a");
+      createControl(element, false, {
+        class: "resetBtn",
+      });
+      element.innerHTML = "Reset";
+      element.addEventListener("click", () => {
+        resetSketch();
       });
     };
   },
