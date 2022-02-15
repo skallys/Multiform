@@ -23,9 +23,9 @@ window.addEventListener("scroll", function () {
   // changement de couleur de la nav
   if (val > 1060 && val < 1511) {
     nav.style.color = "var(--white)";
-  } else if (val > 1811 && val < 2256) {
+  } else if (val > 1747 && val < 2195) {
     nav.style.color = "var(--white)";
-  } else if (val > 2524 && val < 2744) {
+  } else if (val > 2487 && val < 2707) {
     nav.style.color = "var(--white)";
   } else {
     nav.style.color = "var(--black)";
