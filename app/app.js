@@ -1,10 +1,10 @@
 import "./styles/style.css";
 import "../styles/common.css";
 
-import "./components/sketches/london_rain";
-import "./components/sketches/desigual_style";
 import "./components/sketches/labyrinth";
+import "./components/sketches/london_rain";
 import "./components/sketches/multi_line";
+import "./components/sketches/desigual_style";
 
 import { sketches, switchSketch } from "./components/sketches";
 import { init, setCanvasTexture } from "./components/renderer";
@@ -77,11 +77,21 @@ const selectOption = function (elementsToCheck) {
     }
   });
 };
+
 //FORM
 genderOptions.forEach((option) => {
   option.addEventListener("click", selectOption.bind(option, genderOptions));
 });
+
+genderOptions.forEach(function (option) {
+  option.addEventListener("click", () => {
+    option.
+  });
+});
+
 //SIZE
 sizeOptions.forEach((option) => {
   option.addEventListener("click", selectOption.bind(option, sizeOptions));
+  // a encore debuger
+  //
 });

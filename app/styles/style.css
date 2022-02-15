@@ -10,13 +10,12 @@ body {
   display: grid;
   grid-template-columns: 66.7% 33.3%;
   grid-gap: 20px;
-  background-color: var(--white);
-  /*background: rgb(36, 36, 36);
+  background: rgb(36, 36, 36);
   background: linear-gradient(
     180deg,
     rgba(36, 36, 36, 1) 0%,
     rgba(255, 255, 255, 1) 100%
-  );*/
+  );
 }
 
 /*background: rgb(36, 36, 36);

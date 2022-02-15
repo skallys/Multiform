@@ -374,7 +374,7 @@ nav h2 {
   height: 350px;
   grid-column-start: 2;
   grid-column-end: 3;
-  object-fit: fit;
+  object-fit: cover;
   border: 10px solid var(--black);
   border-radius: 40px;
   margin-top: 20px;

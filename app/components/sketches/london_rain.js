@@ -1,7 +1,7 @@
 import { sketches, sketchWidth, createControl } from "../sketches";
 
 const londonRain = {
-  name: "London rain *dessine en dessus*",
+  name: "London rain : draw on me !",
   sketch: (sketch) => {
     //namespacing
 
@@ -14,7 +14,7 @@ const londonRain = {
       //Création d'une id et d'une classe pour plus tard
       cnv.id("drawing-canvas");
       cnv.class("control-target");
-      sketch.background(130);
+      sketch.background(190);
       setupSizeControl();
       setupResetControl();
     };
@@ -36,7 +36,7 @@ const londonRain = {
       let element = document.createElement("input");
       // use helper function to create control. First prameter is the control element itself.
       let control = createControl(element, true, {
-        name: "rain drop's size",
+        name: "Rain drop's size",
         type: "range",
         min: 10,
         max: 200,
@@ -59,7 +59,7 @@ const londonRain = {
       });
       element.innerHTML = "Reset";
       element.addEventListener("click", () => {
-        sketch.background(130);
+        sketch.background(190);
       });
     };
   },

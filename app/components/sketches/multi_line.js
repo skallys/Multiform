@@ -1,7 +1,7 @@
 import { sketches, sketchWidth, createControl } from "../sketches";
 
 const multiLine = {
-  name: "Multi Line",
+  name: "SpotLight",
   sketch: (sketch) => {
     let lineQuantity = 5;
     let clr = 1;
