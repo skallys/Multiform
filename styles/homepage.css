@@ -343,7 +343,7 @@ nav h2 {
   grid-row-end: 2;
   display: flex;
   align-items: flex-end;
-  margin-top: 42px;
+  margin-top: 62px;
 }
 
 #details1 {
@@ -354,6 +354,7 @@ nav h2 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-top: 20px;
 }
 
 .post {
@@ -386,7 +387,7 @@ nav h2 {
   display: grid;
   grid-template-columns: subgrid;
   grid-template-rows: none;
-  margin-bottom: 15vh;
+  margin-bottom: 20vh;
 }
 
 #visual {
@@ -417,7 +418,7 @@ nav h2 {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-bottom: 1vh;
+  margin-bottom: 4vh;
 }
 
 #ligne3 {
